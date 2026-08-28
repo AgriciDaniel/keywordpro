@@ -72,7 +72,7 @@
     "ioredis": "^5.10.0",
     "jspdf": "^4.2.1",
     "lucide-react": "^0.575.0",
-    "motion": "^12.34.3",
+    "motion": "^13.1.1",
     "nanoid": "^5.1.6",
     "next": "16.2.11",
     "next-intl": "^4.8.3",
