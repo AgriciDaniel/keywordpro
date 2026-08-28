@@ -106,8 +106,8 @@ importers:
         specifier: ^3.4.8
         version: 3.4.9
       rate-limiter-flexible:
-        specifier: ^9.1.1
-        version: 9.1.1
+        specifier: ^11.2.0
+        version: 11.2.0
       react:
         specifier: ^19.2.4
         version: 19.2.8
@@ -1967,8 +1967,8 @@ packages:
   raf@3.4.1:
     resolution: {integrity: sha512-Sq4CW4QhwOHE8ucn6J34MqtZCeWFP2aQSmrlroYgqAV1PjStIhJXxYuTgUIfkEk7zTLjmIjLmU5q+fbD1NnOJA==}
 
-  rate-limiter-flexible@9.1.1:
-    resolution: {integrity: sha512-imxFjzPCmvDLMe7d2tsgiSQvs5EI2fI9SNymmslAfOqznZhsZ+PqbIjIYKpuSbd3pKovR1aMG47qfCLIO/adVg==}
+  rate-limiter-flexible@11.2.0:
+    resolution: {integrity: sha512-L0eIK+BmFMi6NcvmtEg7RSswOFKi9MMD5RhBIypFfOve+G6Jl1Xbb8qEHgK3uRzNtkOFYF0L9f7P4rSf2PnUVw==}
 
   react-dom@19.2.8:
     resolution: {integrity: sha512-rVprimfGBG3DR+Tq0IQG2DT5PxKth1WIGDmj5yPmlzr4YBe7uyE+Du4oVqTDXZSHGGGXRtTJEGSSePyQCMBglQ==}
@@ -3585,7 +3585,7 @@ snapshots:
       performance-now: 2.1.0
     optional: true
 
-  rate-limiter-flexible@9.1.1: {}
+  rate-limiter-flexible@11.2.0: {}
 
   react-dom@19.2.8(react@19.2.8):
     dependencies:
