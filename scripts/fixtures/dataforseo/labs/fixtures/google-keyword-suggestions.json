@@ -1,0 +1,852 @@
+{
+  "version": "synthetic-v1",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0 sec.",
+  "cost": 0,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "synthetic-task-id",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0 sec.",
+      "cost": 0,
+      "result_count": 1,
+      "path": [
+        "dataforseo_labs",
+        "google",
+        "keyword_suggestions",
+        "live"
+      ],
+      "data": {
+        "synthetic": true
+      },
+      "result": [
+        {
+          "se_type": "google",
+          "seed_keyword": "keyword pro demo",
+          "seed_keyword_data": {
+            "keyword": "keyword pro demo 1",
+            "location_code": 2840,
+            "language_code": "en",
+            "keyword_info": {
+              "se_type": "google",
+              "last_updated_time": "2026-08-28 00:00:00 +00:00",
+              "competition": 0.12,
+              "competition_level": "LOW",
+              "cpc": 1.4,
+              "search_volume": 900,
+              "low_top_of_page_bid": 0.77,
+              "high_top_of_page_bid": 2.03,
+              "categories": [
+                10001
+              ],
+              "monthly_searches": [
+                {
+                  "month": 9,
+                  "search_volume": 240,
+                  "year": 2025
+                },
+                {
+                  "month": 10,
+                  "search_volume": 253,
+                  "year": 2025
+                },
+                {
+                  "month": 11,
+                  "search_volume": 266,
+                  "year": 2025
+                },
+                {
+                  "month": 12,
+                  "search_volume": 279,
+                  "year": 2025
+                },
+                {
+                  "month": 1,
+                  "search_volume": 292,
+                  "year": 2026
+                },
+                {
+                  "month": 2,
+                  "search_volume": 305,
+                  "year": 2026
+                },
+                {
+                  "month": 3,
+                  "search_volume": 318,
+                  "year": 2026
+                },
+                {
+                  "month": 4,
+                  "search_volume": 331,
+                  "year": 2026
+                },
+                {
+                  "month": 5,
+                  "search_volume": 344,
+                  "year": 2026
+                },
+                {
+                  "month": 6,
+                  "search_volume": 357,
+                  "year": 2026
+                },
+                {
+                  "month": 7,
+                  "search_volume": 370,
+                  "year": 2026
+                },
+                {
+                  "month": 8,
+                  "search_volume": 383,
+                  "year": 2026
+                }
+              ],
+              "search_volume_trend": {
+                "monthly": 3.5135,
+                "quarterly": 11.7825,
+                "yearly": null
+              }
+            },
+            "keyword_properties": {
+              "se_type": "google",
+              "core_keyword": "keyword pro",
+              "keyword_difficulty": 12,
+              "detected_language": "en",
+              "is_another_language": false
+            },
+            "search_intent_info": {
+              "se_type": "google",
+              "main_intent": "commercial",
+              "foreign_intent": []
+            },
+            "avg_backlinks_info": {
+              "se_type": "google",
+              "backlinks": 30,
+              "dofollow": 24,
+              "referring_domains": 9,
+              "rank": 132,
+              "main_domain_rank": 92
+            },
+            "clickstream_keyword_info": {
+              "search_volume": 990,
+              "gender_distribution": {
+                "female": 52,
+                "male": 48
+              },
+              "age_distribution": {
+                "18-24": 16,
+                "25-34": 31,
+                "35-44": 28,
+                "45-54": 15,
+                "55-64": 10
+              }
+            },
+            "keyword_info_normalized_with_clickstream": {
+              "search_volume": 972
+            },
+            "keyword_info_normalized_with_bing": {
+              "search_volume": 63
+            },
+            "serp_info": {
+              "se_type": "google",
+              "check_url": "https://search.example.invalid/synthetic",
+              "serp_item_types": [
+                "organic",
+                "people_also_ask"
+              ],
+              "se_results_count": 125000,
+              "last_updated_time": "2026-08-28 00:00:00 +00:00"
+            }
+          },
+          "location_code": 2840,
+          "language_code": "en",
+          "total_count": 5,
+          "items_count": 5,
+          "offset": 0,
+          "offset_token": "synthetic-suggestions-offset",
+          "items": [
+            {
+              "keyword": "keyword pro demo suggestion 1",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-08-28 00:00:00 +00:00",
+                "competition": 0.12,
+                "competition_level": "LOW",
+                "cpc": 1.4,
+                "search_volume": 900,
+                "low_top_of_page_bid": 0.77,
+                "high_top_of_page_bid": 2.03,
+                "categories": [
+                  10001
+                ],
+                "monthly_searches": [
+                  {
+                    "month": 9,
+                    "search_volume": 240,
+                    "year": 2025
+                  },
+                  {
+                    "month": 10,
+                    "search_volume": 253,
+                    "year": 2025
+                  },
+                  {
+                    "month": 11,
+                    "search_volume": 266,
+                    "year": 2025
+                  },
+                  {
+                    "month": 12,
+                    "search_volume": 279,
+                    "year": 2025
+                  },
+                  {
+                    "month": 1,
+                    "search_volume": 292,
+                    "year": 2026
+                  },
+                  {
+                    "month": 2,
+                    "search_volume": 305,
+                    "year": 2026
+                  },
+                  {
+                    "month": 3,
+                    "search_volume": 318,
+                    "year": 2026
+                  },
+                  {
+                    "month": 4,
+                    "search_volume": 331,
+                    "year": 2026
+                  },
+                  {
+                    "month": 5,
+                    "search_volume": 344,
+                    "year": 2026
+                  },
+                  {
+                    "month": 6,
+                    "search_volume": 357,
+                    "year": 2026
+                  },
+                  {
+                    "month": 7,
+                    "search_volume": 370,
+                    "year": 2026
+                  },
+                  {
+                    "month": 8,
+                    "search_volume": 383,
+                    "year": 2026
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 3.5135,
+                  "quarterly": 11.7825,
+                  "yearly": null
+                }
+              },
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": "keyword pro",
+                "keyword_difficulty": 12,
+                "detected_language": "en",
+                "is_another_language": false
+              },
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "commercial",
+                "foreign_intent": []
+              },
+              "avg_backlinks_info": {
+                "se_type": "google",
+                "backlinks": 30,
+                "dofollow": 24,
+                "referring_domains": 9,
+                "rank": 132,
+                "main_domain_rank": 92
+              },
+              "clickstream_keyword_info": {
+                "search_volume": 990,
+                "gender_distribution": {
+                  "female": 52,
+                  "male": 48
+                },
+                "age_distribution": {
+                  "18-24": 16,
+                  "25-34": 31,
+                  "35-44": 28,
+                  "45-54": 15,
+                  "55-64": 10
+                }
+              },
+              "keyword_info_normalized_with_clickstream": {
+                "search_volume": 972
+              },
+              "keyword_info_normalized_with_bing": {
+                "search_volume": 63
+              },
+              "serp_info": {
+                "se_type": "google",
+                "check_url": "https://search.example.invalid/synthetic",
+                "serp_item_types": [
+                  "organic",
+                  "people_also_ask"
+                ],
+                "se_results_count": 125000,
+                "last_updated_time": "2026-08-28 00:00:00 +00:00"
+              }
+            },
+            {
+              "keyword": "keyword pro demo suggestion 2",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-08-28 00:00:00 +00:00",
+                "competition": 0.23,
+                "competition_level": "LOW",
+                "cpc": 1.75,
+                "search_volume": 1550,
+                "low_top_of_page_bid": 0.96,
+                "high_top_of_page_bid": 2.54,
+                "categories": [
+                  10001
+                ],
+                "monthly_searches": [
+                  {
+                    "month": 9,
+                    "search_volume": 310,
+                    "year": 2025
+                  },
+                  {
+                    "month": 10,
+                    "search_volume": 323,
+                    "year": 2025
+                  },
+                  {
+                    "month": 11,
+                    "search_volume": 336,
+                    "year": 2025
+                  },
+                  {
+                    "month": 12,
+                    "search_volume": 349,
+                    "year": 2025
+                  },
+                  {
+                    "month": 1,
+                    "search_volume": 362,
+                    "year": 2026
+                  },
+                  {
+                    "month": 2,
+                    "search_volume": 375,
+                    "year": 2026
+                  },
+                  {
+                    "month": 3,
+                    "search_volume": 388,
+                    "year": 2026
+                  },
+                  {
+                    "month": 4,
+                    "search_volume": 401,
+                    "year": 2026
+                  },
+                  {
+                    "month": 5,
+                    "search_volume": 414,
+                    "year": 2026
+                  },
+                  {
+                    "month": 6,
+                    "search_volume": 427,
+                    "year": 2026
+                  },
+                  {
+                    "month": 7,
+                    "search_volume": 440,
+                    "year": 2026
+                  },
+                  {
+                    "month": 8,
+                    "search_volume": 453,
+                    "year": 2026
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 2.9545,
+                  "quarterly": 9.7257,
+                  "yearly": null
+                }
+              },
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": "keyword pro",
+                "keyword_difficulty": 23,
+                "detected_language": "en",
+                "is_another_language": false
+              },
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "informational",
+                "foreign_intent": []
+              },
+              "avg_backlinks_info": {
+                "se_type": "google",
+                "backlinks": 41,
+                "dofollow": 35,
+                "referring_domains": 13,
+                "rank": 143,
+                "main_domain_rank": 103
+              },
+              "clickstream_keyword_info": {
+                "search_volume": 1705,
+                "gender_distribution": {
+                  "female": 52,
+                  "male": 48
+                },
+                "age_distribution": {
+                  "18-24": 16,
+                  "25-34": 31,
+                  "35-44": 28,
+                  "45-54": 15,
+                  "55-64": 10
+                }
+              },
+              "keyword_info_normalized_with_clickstream": {
+                "search_volume": 1674
+              },
+              "keyword_info_normalized_with_bing": {
+                "search_volume": 109
+              },
+              "serp_info": {
+                "se_type": "google",
+                "check_url": "https://search.example.invalid/synthetic",
+                "serp_item_types": [
+                  "organic",
+                  "people_also_ask"
+                ],
+                "se_results_count": 125000,
+                "last_updated_time": "2026-08-28 00:00:00 +00:00"
+              }
+            },
+            {
+              "keyword": "keyword pro demo suggestion 3",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-08-28 00:00:00 +00:00",
+                "competition": 0.34,
+                "competition_level": "MEDIUM",
+                "cpc": 2.0999999999999996,
+                "search_volume": 2200,
+                "low_top_of_page_bid": 1.15,
+                "high_top_of_page_bid": 3.04,
+                "categories": [
+                  10001
+                ],
+                "monthly_searches": [
+                  {
+                    "month": 9,
+                    "search_volume": 380,
+                    "year": 2025
+                  },
+                  {
+                    "month": 10,
+                    "search_volume": 393,
+                    "year": 2025
+                  },
+                  {
+                    "month": 11,
+                    "search_volume": 406,
+                    "year": 2025
+                  },
+                  {
+                    "month": 12,
+                    "search_volume": 419,
+                    "year": 2025
+                  },
+                  {
+                    "month": 1,
+                    "search_volume": 432,
+                    "year": 2026
+                  },
+                  {
+                    "month": 2,
+                    "search_volume": 445,
+                    "year": 2026
+                  },
+                  {
+                    "month": 3,
+                    "search_volume": 458,
+                    "year": 2026
+                  },
+                  {
+                    "month": 4,
+                    "search_volume": 471,
+                    "year": 2026
+                  },
+                  {
+                    "month": 5,
+                    "search_volume": 484,
+                    "year": 2026
+                  },
+                  {
+                    "month": 6,
+                    "search_volume": 497,
+                    "year": 2026
+                  },
+                  {
+                    "month": 7,
+                    "search_volume": 510,
+                    "year": 2026
+                  },
+                  {
+                    "month": 8,
+                    "search_volume": 523,
+                    "year": 2026
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 2.549,
+                  "quarterly": 8.2803,
+                  "yearly": null
+                }
+              },
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": "keyword pro",
+                "keyword_difficulty": 34,
+                "detected_language": "en",
+                "is_another_language": false
+              },
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "commercial",
+                "foreign_intent": []
+              },
+              "avg_backlinks_info": {
+                "se_type": "google",
+                "backlinks": 52,
+                "dofollow": 46,
+                "referring_domains": 16,
+                "rank": 154,
+                "main_domain_rank": 114
+              },
+              "clickstream_keyword_info": {
+                "search_volume": 2420,
+                "gender_distribution": {
+                  "female": 52,
+                  "male": 48
+                },
+                "age_distribution": {
+                  "18-24": 16,
+                  "25-34": 31,
+                  "35-44": 28,
+                  "45-54": 15,
+                  "55-64": 10
+                }
+              },
+              "keyword_info_normalized_with_clickstream": {
+                "search_volume": 2376
+              },
+              "keyword_info_normalized_with_bing": {
+                "search_volume": 154
+              },
+              "serp_info": {
+                "se_type": "google",
+                "check_url": "https://search.example.invalid/synthetic",
+                "serp_item_types": [
+                  "organic",
+                  "people_also_ask"
+                ],
+                "se_results_count": 125000,
+                "last_updated_time": "2026-08-28 00:00:00 +00:00"
+              }
+            },
+            {
+              "keyword": "keyword pro demo suggestion 4",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-08-28 00:00:00 +00:00",
+                "competition": 0.45,
+                "competition_level": "MEDIUM",
+                "cpc": 2.4499999999999997,
+                "search_volume": 2850,
+                "low_top_of_page_bid": 1.35,
+                "high_top_of_page_bid": 3.55,
+                "categories": [
+                  10001
+                ],
+                "monthly_searches": [
+                  {
+                    "month": 9,
+                    "search_volume": 450,
+                    "year": 2025
+                  },
+                  {
+                    "month": 10,
+                    "search_volume": 463,
+                    "year": 2025
+                  },
+                  {
+                    "month": 11,
+                    "search_volume": 476,
+                    "year": 2025
+                  },
+                  {
+                    "month": 12,
+                    "search_volume": 489,
+                    "year": 2025
+                  },
+                  {
+                    "month": 1,
+                    "search_volume": 502,
+                    "year": 2026
+                  },
+                  {
+                    "month": 2,
+                    "search_volume": 515,
+                    "year": 2026
+                  },
+                  {
+                    "month": 3,
+                    "search_volume": 528,
+                    "year": 2026
+                  },
+                  {
+                    "month": 4,
+                    "search_volume": 541,
+                    "year": 2026
+                  },
+                  {
+                    "month": 5,
+                    "search_volume": 554,
+                    "year": 2026
+                  },
+                  {
+                    "month": 6,
+                    "search_volume": 567,
+                    "year": 2026
+                  },
+                  {
+                    "month": 7,
+                    "search_volume": 580,
+                    "year": 2026
+                  },
+                  {
+                    "month": 8,
+                    "search_volume": 593,
+                    "year": 2026
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 2.2414,
+                  "quarterly": 7.2089,
+                  "yearly": null
+                }
+              },
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": "keyword pro",
+                "keyword_difficulty": 45,
+                "detected_language": "en",
+                "is_another_language": false
+              },
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "informational",
+                "foreign_intent": []
+              },
+              "avg_backlinks_info": {
+                "se_type": "google",
+                "backlinks": 63,
+                "dofollow": 57,
+                "referring_domains": 20,
+                "rank": 165,
+                "main_domain_rank": 125
+              },
+              "clickstream_keyword_info": {
+                "search_volume": 3135,
+                "gender_distribution": {
+                  "female": 52,
+                  "male": 48
+                },
+                "age_distribution": {
+                  "18-24": 16,
+                  "25-34": 31,
+                  "35-44": 28,
+                  "45-54": 15,
+                  "55-64": 10
+                }
+              },
+              "keyword_info_normalized_with_clickstream": {
+                "search_volume": 3078
+              },
+              "keyword_info_normalized_with_bing": {
+                "search_volume": 200
+              },
+              "serp_info": {
+                "se_type": "google",
+                "check_url": "https://search.example.invalid/synthetic",
+                "serp_item_types": [
+                  "organic",
+                  "people_also_ask"
+                ],
+                "se_results_count": 125000,
+                "last_updated_time": "2026-08-28 00:00:00 +00:00"
+              }
+            },
+            {
+              "keyword": "keyword pro demo suggestion 5",
+              "location_code": 2840,
+              "language_code": "en",
+              "keyword_info": {
+                "se_type": "google",
+                "last_updated_time": "2026-08-28 00:00:00 +00:00",
+                "competition": 0.56,
+                "competition_level": "MEDIUM",
+                "cpc": 2.8,
+                "search_volume": 3500,
+                "low_top_of_page_bid": 1.54,
+                "high_top_of_page_bid": 4.06,
+                "categories": [
+                  10001
+                ],
+                "monthly_searches": [
+                  {
+                    "month": 9,
+                    "search_volume": 520,
+                    "year": 2025
+                  },
+                  {
+                    "month": 10,
+                    "search_volume": 533,
+                    "year": 2025
+                  },
+                  {
+                    "month": 11,
+                    "search_volume": 546,
+                    "year": 2025
+                  },
+                  {
+                    "month": 12,
+                    "search_volume": 559,
+                    "year": 2025
+                  },
+                  {
+                    "month": 1,
+                    "search_volume": 572,
+                    "year": 2026
+                  },
+                  {
+                    "month": 2,
+                    "search_volume": 585,
+                    "year": 2026
+                  },
+                  {
+                    "month": 3,
+                    "search_volume": 598,
+                    "year": 2026
+                  },
+                  {
+                    "month": 4,
+                    "search_volume": 611,
+                    "year": 2026
+                  },
+                  {
+                    "month": 5,
+                    "search_volume": 624,
+                    "year": 2026
+                  },
+                  {
+                    "month": 6,
+                    "search_volume": 637,
+                    "year": 2026
+                  },
+                  {
+                    "month": 7,
+                    "search_volume": 650,
+                    "year": 2026
+                  },
+                  {
+                    "month": 8,
+                    "search_volume": 663,
+                    "year": 2026
+                  }
+                ],
+                "search_volume_trend": {
+                  "monthly": 2,
+                  "quarterly": 6.383,
+                  "yearly": null
+                }
+              },
+              "keyword_properties": {
+                "se_type": "google",
+                "core_keyword": "keyword pro",
+                "keyword_difficulty": 56,
+                "detected_language": "en",
+                "is_another_language": false
+              },
+              "search_intent_info": {
+                "se_type": "google",
+                "main_intent": "commercial",
+                "foreign_intent": []
+              },
+              "avg_backlinks_info": {
+                "se_type": "google",
+                "backlinks": 74,
+                "dofollow": 68,
+                "referring_domains": 24,
+                "rank": 176,
+                "main_domain_rank": 136
+              },
+              "clickstream_keyword_info": {
+                "search_volume": 3850,
+                "gender_distribution": {
+                  "female": 52,
+                  "male": 48
+                },
+                "age_distribution": {
+                  "18-24": 16,
+                  "25-34": 31,
+                  "35-44": 28,
+                  "45-54": 15,
+                  "55-64": 10
+                }
+              },
+              "keyword_info_normalized_with_clickstream": {
+                "search_volume": 3780
+              },
+              "keyword_info_normalized_with_bing": {
+                "search_volume": 245
+              },
+              "serp_info": {
+                "se_type": "google",
+                "check_url": "https://search.example.invalid/synthetic",
+                "serp_item_types": [
+                  "organic",
+                  "people_also_ask"
+                ],
+                "se_results_count": 125000,
+                "last_updated_time": "2026-08-28 00:00:00 +00:00"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

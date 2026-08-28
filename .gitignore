@@ -1,0 +1,78 @@
+# Dependencies
+/node_modules/
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Environment files and secret material
+.env*
+!.env.example
+.dev.vars
+.dev.vars.*
+!.dev.vars.example
+.npmrc
+.netrc
+*.key
+*.pem
+*.p12
+*.pfx
+certificates/
+id_ed25519
+id_rsa
+
+# Next.js and TypeScript output
+/.next/
+/out/
+/build/
+*.tsbuildinfo
+next-env.d.ts
+
+# Tests and generated reports
+/coverage/
+/test-results/
+/screenshots/
+/playwright-report/
+/lighthouse-reports/
+
+# Local databases, exports, logs, and temporary files
+*.db
+*.dump
+*.live.pdf
+*.log
+*.sqlite
+/.backup/
+/.tmp/
+/tmp/
+/logs/
+
+# Common local credential exports
+client_secret*.json
+service-account*.json
+*.credentials.json
+*.token.json
+scripts/.google-token.json
+tests/.auth/
+
+# Package-manager debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Local editor, desktop, and agent state
+.DS_Store
+.directory
+/.agents/
+/.claude/
+/.codex/
+/.conductor/
+/.kiro/
+/.vercel/
+/.gitnexus
+
+# Miscellaneous local artifacts
+nul

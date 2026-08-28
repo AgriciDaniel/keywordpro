@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      @keyframes blink {
+        0%, 90%, 100% { transform: scaleY(1); }
+        93%, 97% { transform: scaleY(0.1); }
+      }
+      
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        25% { transform: translateY(-8px) rotate(-1deg); }
+        50% { transform: translateY(0) rotate(0deg); }
+        75% { transform: translateY(-5px) rotate(1deg); }
+      }
+      
+      @keyframes eyebrowRaise {
+        0%, 85%, 100% { transform: translateY(0); }
+        88%, 92% { transform: translateY(-4px); }
+      }
+      
+      @keyframes subtleGlow {
+        0%, 100% { filter: drop-shadow(0 0 0px rgba(249, 115, 22, 0)); }
+        50% { filter: drop-shadow(0 0 8px rgba(249, 115, 22, 0.3)); }
+      }
+      
+      .eye {
+        animation: blink 5s infinite;
+      }
+      
+      .character {
+        animation: bounce 3s ease-in-out infinite, subtleGlow 4s ease-in-out infinite;
+        transform-origin: center;
+      }
+      
+      .eyebrow {
+        transform-origin: center;
+        animation: eyebrowRaise 7s infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Character Group with bounce animation -->
+  <g class="character">
+    <!-- Main Head Circle -->
+    <circle cx="256" cy="256" r="180" fill="#F97316"/>
+    
+    <!-- Head Outline -->
+    <circle cx="256" cy="256" r="180" fill="none" stroke="#3D3D3D" stroke-width="8"/>
+
+    <!-- WAYFARER/RECTANGULAR GLASSES GROUP -->
+    <g fill="none" stroke="#3D3D3D" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Left Lens (rectangular with rounded corners) -->
+      <rect x="150" y="225" width="80" height="60" rx="8" ry="8"/>
+      
+      <!-- Right Lens (rectangular with rounded corners) -->
+      <rect x="282" y="225" width="80" height="60" rx="8" ry="8"/>
+      
+      <!-- Bridge -->
+      <line x1="230" y1="255" x2="282" y2="255"/>
+      
+      <!-- Left Temple Arm (thick, bold) -->
+      <path d="M 150 245 L 85 240" stroke-width="10"/>
+      
+      <!-- Right Temple Arm (thick, bold) -->
+      <path d="M 362 245 L 427 240" stroke-width="10"/>
+    </g>
+
+    <!-- EYEBROWS GROUP (straighter for modern look) -->
+    <g class="eyebrow" fill="none" stroke="#3D3D3D" stroke-width="6" stroke-linecap="round">
+      <!-- Left Eyebrow -->
+      <path d="M 155 195 Q 190 192 220 195"/>
+      
+      <!-- Right Eyebrow -->
+      <path d="M 292 195 Q 322 192 357 195"/>
+    </g>
+
+    <!-- EYES GROUP -->
+    <g fill="#3D3D3D">
+      <!-- Left Eye -->
+      <ellipse class="eye" cx="190" cy="255" rx="12" ry="12" style="transform-origin: 190px 255px;"/>
+      
+      <!-- Right Eye -->
+      <ellipse class="eye" cx="322" cy="255" rx="12" ry="12" style="transform-origin: 322px 255px;"/>
+    </g>
+  </g>
+</svg>

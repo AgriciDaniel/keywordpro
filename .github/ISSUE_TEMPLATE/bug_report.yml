@@ -1,0 +1,53 @@
+name: Bug report
+description: Report a reproducible Keyword Pro problem
+title: "bug: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: Thank you for helping improve Keyword Pro. Never include API credentials or encryption keys.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the observed behavior and what you expected instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Open...
+        2. Select...
+        3. Observe...
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Commit or version
+      placeholder: Git commit SHA or release tag
+    validations:
+      required: true
+
+  - type: dropdown
+    id: live-call
+    attributes:
+      label: Did this involve a paid DataForSEO call?
+      options:
+        - No
+        - Yes
+        - Unsure
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots and sanitized logs
+      description: Remove credentials, personal data, and provider response data that should remain private.

@@ -1,0 +1,84 @@
+{
+  "version": "synthetic-v1",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0 sec.",
+  "cost": 0,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "synthetic-task-id",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0 sec.",
+      "cost": 0,
+      "result_count": 1,
+      "path": [
+        "content_analysis",
+        "sentiment_analysis",
+        "live"
+      ],
+      "data": {
+        "synthetic": true
+      },
+      "result": [
+        {
+          "type": "sentiment_analysis",
+          "total_count": 100,
+          "rank": 1,
+          "top_domains": [
+            {
+              "domain": "positive.example.invalid",
+              "count": 40
+            },
+            {
+              "domain": "neutral.example.invalid",
+              "count": 30
+            }
+          ],
+          "sentiment_connotations": {
+            "happiness": 45,
+            "trust": 32,
+            "concern": 8
+          },
+          "connotation_types": {
+            "positive": 62,
+            "negative": 18,
+            "neutral": 20
+          },
+          "text_categories": [
+            {
+              "category": "synthetic research",
+              "count": 100
+            }
+          ],
+          "page_categories": [
+            {
+              "category": "guides",
+              "count": 70
+            }
+          ],
+          "page_types": [
+            {
+              "type": "article",
+              "count": 100
+            }
+          ],
+          "countries": [
+            {
+              "country": "US",
+              "count": 100
+            }
+          ],
+          "languages": [
+            {
+              "language": "en",
+              "count": 100
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

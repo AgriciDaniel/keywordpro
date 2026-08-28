@@ -1,0 +1,1594 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@source "../**/*.{js,jsx,ts,tsx,mdx}";
+@source "../../content/**/*.{md,mdx}";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Cursor-inspired minimal design system
+ * Focus: Performance, clarity, restraint
+ */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+
+  /* fonts */
+  --font-sans: var(--font-noto-sans);
+  --font-mono: var(--font-noto-sans-mono);
+  --font-serif: var(--font-noto-serif);
+
+  /* Essential animations only */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-fade-up: fade-up 0.5s ease-out;
+  --animate-fade-in: fade-in 0.3s ease-out;
+  --animate-cursor-blink: cursor-blink 530ms steps(1) infinite;
+  --animate-marquee: marquee var(--duration, 30s) linear infinite;
+  --animate-marquee-reverse: marquee-reverse var(--duration, 30s) linear
+    infinite;
+  --animate-wiggle: wiggle 0.6s ease-in-out;
+  --animate-bounce-once: bounce-once 0.4s ease-out;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes marquee-reverse {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-down-out {
+    from {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(12px) scale(0.98);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes cursor-blink {
+    0%,
+    50% {
+      opacity: 1;
+    }
+    51%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    15% { transform: rotate(-12deg); }
+    30% { transform: rotate(10deg); }
+    45% { transform: rotate(-8deg); }
+    60% { transform: rotate(6deg); }
+    75% { transform: rotate(-3deg); }
+  }
+
+  @keyframes bounce-once {
+    0%, 100% { transform: scale(1); }
+    30% { transform: scale(1.2); }
+    50% { transform: scale(0.9); }
+    70% { transform: scale(1.05); }
+  }
+
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 8px 2px rgba(135, 169, 255, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 16px 4px rgba(135, 169, 255, 0.4);
+    }
+  }
+
+  @keyframes pulse-glow-orange {
+    0%,
+    100% {
+      opacity: 0.7;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes card-sweep {
+    0% {
+      transform: translateX(-120%);
+      opacity: 0;
+    }
+    30% {
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateX(220%);
+      opacity: 0;
+    }
+  }
+
+
+  @keyframes text-sweep {
+    0% {
+      background-position: 200% 50%;
+    }
+    100% {
+      background-position: -20% 50%;
+    }
+  }
+
+  @keyframes cta-color-cycle {
+    0%,
+    100% {
+      background-color: #fafaf9;
+    }
+    25% {
+      background-color: #fb923c;
+    }
+    50% {
+      background-color: #6aa84f;
+    }
+    75% {
+      background-color: #fbbf24;
+    }
+  }
+
+  @keyframes cta-soft-pulse {
+    0%,
+    100% {
+      box-shadow: 0 0 40px -10px rgba(255, 255, 255, 0.12),
+        0 0 0 0 rgba(251, 146, 60, 0);
+    }
+    50% {
+      box-shadow: 0 0 40px -10px rgba(255, 255, 255, 0.12),
+        0 0 22px 2px rgba(251, 146, 60, 0.28);
+    }
+  }
+
+  @keyframes step-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgba(106, 168, 79, 0);
+    }
+    50% {
+      box-shadow: 0 0 10px 1px rgba(106, 168, 79, 0.5);
+    }
+  }
+
+  @keyframes commercial-proof-scan {
+    0% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    22% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(380%);
+      opacity: 0;
+    }
+  }
+}
+
+.opportunity-glow {
+  animation: pulse-glow-orange 2s ease-in-out infinite;
+  color: #fb923c;
+}
+
+/* Light theme - Cursor-inspired warm light */
+:root {
+  /*
+   * One measure for the research console: the heading, the composer and the
+   * sub-category pill row all sit on it, so they stay optically aligned at any
+   * width or zoom level. Grows with the viewport, capped so long result tables
+   * stay readable.
+   */
+  --console-measure: min(100%, 60rem);
+
+  /*
+   * Results need more room than the composer: a keyword table is 12+ columns.
+   * The composer keeps the narrow measure so prompt text stays readable.
+   */
+  --console-measure-wide: min(100%, 84rem);
+
+  --background: #fafaf9;
+  --foreground: #1c1917;
+  --card: #ffffff;
+  --card-foreground: #1c1917;
+  --popover: #ffffff;
+  --popover-foreground: #1c1917;
+  --primary: #f97316;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f4;
+  --secondary-foreground: #1c1917;
+  --muted: #f5f5f4;
+  --muted-foreground: #78716c;
+  --accent: #fff7ed;
+  --accent-foreground: #c2410c;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e7e5e4;
+  --input: #e7e5e4;
+  --ring: #f97316;
+  --chart-1: #f97316;
+  --chart-2: #78716c;
+  --chart-3: #1c1917;
+  --chart-4: #a8a29e;
+  --chart-5: #0ea5e9;
+  --sidebar: #fafaf9;
+  --sidebar-foreground: #78716c;
+  --sidebar-primary: #f97316;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #fff7ed;
+  --sidebar-accent-foreground: #c2410c;
+  --sidebar-border: #e7e5e4;
+  --sidebar-ring: #f97316;
+  --radius: 0.375rem;
+  --shadow-2xs: 0 1px 2px 0 rgb(0 0 0 / 0.03);
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px
+    rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px
+    rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tile: #e5e5e5;
+}
+
+/* Dark theme - Cursor-inspired deep dark */
+.dark {
+  --background: #1f1f1f;
+  --foreground: #f4f1ea;
+  --card: #2c2c2a;
+  --card-foreground: #f4f1ea;
+  --popover: #2c2c2a;
+  --popover-foreground: #f4f1ea;
+  --primary: #f97316;
+  --primary-foreground: #ffffff;
+  --secondary: #2c2c2a;
+  --secondary-foreground: #f4f1ea;
+  --muted: #2c2c2a;
+  --muted-foreground: #a6a199;
+  --accent: rgba(255, 255, 255, 0.07);
+  --accent-foreground: #f4f1ea;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.1);
+  --ring: #f97316;
+  --chart-1: #f97316;
+  --chart-2: #fbbf24;
+  --chart-3: #ffffff;
+  --chart-4: #71717a;
+  --chart-5: #38bdf8;
+  --sidebar: #1f1f1f;
+  --sidebar-foreground: #c8c2b8;
+  --sidebar-primary: #f97316;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(255, 255, 255, 0.07);
+  --sidebar-accent-foreground: #f4f1ea;
+  --sidebar-border: #3b3935;
+  --sidebar-ring: #f97316;
+  --radius: 0.375rem;
+  --shadow-2xs: 0 1px 2px 0 rgb(0 0 0 / 0.2);
+  --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.2);
+  --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px
+    rgb(0 0 0 / 0.3);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.3), 0 8px 10px -6px
+    rgb(0 0 0 / 0.3);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+  --tile: #262626;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+  }
+
+  /* Remove scrollbar gutter in protected layout - custom scrollbar handles it */
+  html:has([data-slot="sidebar-wrapper"]) {
+    scrollbar-gutter: auto;
+  }
+
+  @media (min-width: 768px) {
+    html[data-protected-workspace="true"] [data-slot="dialog-content"],
+    html[data-protected-workspace="true"] [data-slot="alert-dialog-content"] {
+      left: var(--workspace-center-x, 50%);
+      max-width: min(var(--workspace-width, 100vw), calc(100vw - 2rem));
+    }
+
+    html[data-protected-workspace="true"] [data-workspace-modal-center] {
+      left: var(--workspace-left, 0px);
+      right: calc(100vw - var(--workspace-right, 100vw));
+      width: auto;
+    }
+
+    /*
+     * Centered workspace content lives inside the protected scroll canvas.
+     * Do not gate this nudge on html[data-protected-workspace]: that flag is
+     * set by a client effect for portaled modal variables, so route-level
+     * loading cards can paint once uncorrected and then snap horizontally.
+     * The canvas selector is present in the initial markup and keeps article
+     * workflow loaders centered from their first frame.
+     */
+    [data-workspace-canvas] [data-workspace-content-center] {
+      position: relative;
+      left: calc(var(--workspace-scroll-rail-width, 12px) / 2);
+    }
+  }
+
+  /* Defensive: when a dialog is in the open state, force the overlay to
+     full opacity. The 2026-04-29 credits-guard reopen bug had the
+     backdrop showing on first open but missing on subsequent opens -
+     symptom of tw-animate-css's enter/exit keyframe state not resetting
+     cleanly across rapid open/close cycles. The animations still run for
+     the visual fade-in transition; this rule just guarantees the steady-
+     state opacity is 1 instead of leaving it to the keyframe end value. */
+  [data-slot="dialog-overlay"][data-state="open"] {
+    opacity: 1;
+  }
+
+  /* When a data-collection module panel is open, hide the protected-shell
+     custom scroll rail. The rail otherwise sits at z-50 in the outer
+     stacking context and renders above the panel's z-20 backdrop, creating
+     a click-dead lighter-gray strip on the right edge. Hiding via opacity
+     + pointer-events leaves the rail's geometry intact (no layout shift,
+     no centering math change) - see [[True Canvas Centering]]. */
+  html:has([data-data-panel-content]) [data-workspace-scroll-rail] {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Unified scrollbar design - no arrows, no track, just the thumb */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background: var(--background);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--background);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #9a9aa0;
+    border-radius: 9999px;
+    cursor: grab;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b4b4ba;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
+  }
+
+  ::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  /* Enhanced Focus Indicators for Accessibility (WCAG 2.1 AA) */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+
+  /* Interactive elements focus styles */
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary ring-2 ring-primary/20;
+  }
+
+  /* Remove default outline for mouse users, keep for keyboard */
+  :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Recharts makes every chart surface focusable (role="application") for
+     keyboard navigation. The button-style ring above, drawn tight around a
+     plot, reads as part of the chart, so charts get a quieter ring that only
+     keyboard focus can summon. */
+  .recharts-surface:focus {
+    outline: none;
+  }
+  .recharts-surface:focus-visible {
+    outline: 1px solid rgba(255, 255, 255, 0.22);
+    outline-offset: 6px;
+    border-radius: 8px;
+  }
+
+  /* Native select popups take their colours from the page's colour scheme,
+     not from the select's own classes. The app never declares one, so the
+     option list opened in the OS light theme with the app's grey text on
+     white. Dark, everywhere, with the console's surfaces. */
+  select {
+    color-scheme: dark;
+  }
+  select option,
+  select optgroup {
+    background-color: #1d1d1c;
+    color: #ede7dc;
+  }
+}
+
+@layer utilities {
+  /* Fade up animation for scroll reveal */
+  .animate-fade-up {
+    animation: fade-up 0.5s ease-out forwards;
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out forwards;
+  }
+
+  .animate-fade-down-out {
+    animation: fade-down-out 0.25s ease-in forwards;
+  }
+
+  /*
+   * Workflow viewport containment.
+   * Keeps the existing scene transitions intact while letting the browser skip
+   * layout/paint for expensive article blocks that are below the viewport.
+   */
+  @supports (content-visibility: auto) {
+    .workflow-offscreen-section {
+      content-visibility: auto;
+      contain-intrinsic-size: auto 240px;
+    }
+
+    .workflow-offscreen-section--heading {
+      contain-intrinsic-size: auto 96px;
+    }
+
+    .workflow-offscreen-section--step-row {
+      contain-intrinsic-size: auto 40px;
+    }
+
+    .workflow-offscreen-section--compact-card {
+      contain-intrinsic-size: auto 112px;
+    }
+
+    .workflow-offscreen-section--text {
+      contain-intrinsic-size: auto 180px;
+    }
+
+    .workflow-offscreen-section--list {
+      contain-intrinsic-size: auto 220px;
+    }
+
+    .workflow-offscreen-section--table {
+      contain-intrinsic-size: auto 300px;
+    }
+
+    .workflow-offscreen-section--media {
+      contain-intrinsic-size: auto 560px;
+    }
+
+    .workflow-offscreen-section--chart {
+      contain-intrinsic-size: auto 460px;
+    }
+
+    .workflow-offscreen-section--draft-block {
+      contain-intrinsic-size: auto 260px;
+    }
+
+    .workflow-offscreen-section--interactive:hover,
+    .workflow-offscreen-section--interactive:focus-within {
+      content-visibility: visible;
+    }
+
+  }
+
+  /* Stagger delays for sequential animations */
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+
+  /* Smooth multi-color fade for hero CTAs: white → orange → moss → amber → white */
+  .animate-cta-color-cycle {
+    animation: cta-color-cycle 40s ease-in-out infinite;
+  }
+  .animate-cta-color-cycle:hover {
+    animation-play-state: paused;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-cta-color-cycle {
+      animation: none;
+      background-color: #fafaf9;
+    }
+  }
+
+  /* Slower variant (5x slower than default, 60s) - navbar / persistent CTAs */
+  .animate-cta-color-cycle-slow {
+    animation: cta-color-cycle 60s ease-in-out infinite;
+  }
+  .animate-cta-color-cycle-slow:hover {
+    animation-play-state: paused;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-cta-color-cycle-slow {
+      animation: none;
+      background-color: #6aa84f;
+    }
+  }
+
+  /* Gentle breathing glow for primary CTAs - orange-tinted to match brand accents */
+  .animate-cta-pulse {
+    animation: cta-soft-pulse 2.8s ease-in-out infinite;
+  }
+  .animate-cta-pulse:hover {
+    animation: none;
+    box-shadow: 0 0 28px 3px rgba(251, 146, 60, 0.38);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-cta-pulse {
+      animation: none;
+    }
+  }
+
+  /* Eye-safe breathing glow for walkthrough step indicators (moss-tinted, no opacity flashing) */
+  .animate-step-glow {
+    animation: step-glow 2.8s ease-in-out infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-step-glow {
+      animation: none;
+    }
+  }
+
+  /* Modal design language classes moved to @layer components below.
+     They define `position: relative` (panel surface) and `position: fixed`
+     (shell) which conflict with utility-class positioning when applied to
+     the same element. Components layer has lower precedence than utilities
+     so utility classes like `.fixed` (Radix Dialog primitive) win cleanly. */
+
+  .fullscreen-modal-takeover {
+    @apply fixed inset-0 z-[9999] bg-black/90 backdrop-blur-sm;
+  }
+
+  .fullscreen-modal-close {
+    @apply fixed top-4 right-4 z-[10001] p-2 bg-[#191919]/80 hover:bg-[#2A2A2A] border border-[#3E3E3E] rounded-full text-white/70 hover:text-white transition-colors;
+  }
+
+  /* Hide scrollbar */
+  .scrollbar-hide {
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Text gradient utility */
+  .text-gradient {
+    background: linear-gradient(135deg, var(--primary) 0%, #fbbf24 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Safe area inset utilities for notched devices (iPhone X+, Android gesture nav) */
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .pl-safe {
+    padding-left: env(safe-area-inset-left, 0px);
+  }
+  .pr-safe {
+    padding-right: env(safe-area-inset-right, 0px);
+  }
+  .px-safe {
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
+  }
+  .py-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .mb-safe {
+    margin-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+/* Dialog/modal scroll lock fix */
+html body[data-scroll-locked] {
+  overflow: visible;
+  margin-right: 0;
+}
+
+/* Workflow cursor language (Topic -> Publish): keep interaction affordances consistent */
+.workflow-cursor-scope button:not(:disabled),
+.workflow-cursor-scope [role="button"]:not([aria-disabled="true"]),
+.workflow-cursor-scope a[href]:not([aria-disabled="true"]),
+.workflow-cursor-scope summary,
+.workflow-cursor-scope [data-cursor="pointer"] {
+  cursor: pointer;
+}
+
+.workflow-cursor-scope button:disabled,
+.workflow-cursor-scope [role="button"][aria-disabled="true"],
+.workflow-cursor-scope a[href][aria-disabled="true"],
+.workflow-cursor-scope [data-disabled="true"] {
+  cursor: not-allowed;
+}
+
+/*
+  Some shared button primitives apply pointer-events: none on disabled state.
+  Re-enable pointer events inside workflow scope so users still see not-allowed
+  while the native disabled attribute continues blocking activation.
+*/
+.workflow-cursor-scope button:disabled {
+  pointer-events: auto;
+}
+
+/* Fumadocs banner fix */
+div[class*="border-t"][class*="bg-fd-secondary"]:not(:has(*)):not(
+    [data-content]
+  ) {
+  display: none;
+}
+.border-t.bg-fd-secondary\/50.p-3:empty {
+  display: none;
+}
+[class*="fd-secondary"]:empty:not([data-banner-content]) {
+  display: none;
+}
+
+@layer components {
+  /*
+   * Modal design language.
+   *
+   * Scope decisions still live at the call site:
+   * - workspace dialogs add `data-workspace-modal-center`
+   * - full-screen takeovers cover the viewport
+   *
+   * These classes standardize the visual tokens underneath those decisions:
+   * backdrop darkness, blur, radius, border, panel surface, shadow, and z-layer.
+   *
+   * 2026-04-29: moved from `@layer utilities` to `@layer components`.
+   * The `position: relative` baked into `.workspace-modal-panel` was being
+   * applied to elements that ALSO carried `.fixed` (Radix Dialog primitive
+   * uses `workspace-modal-panel` for visual styling, AND adds `fixed` for
+   * viewport anchoring). Same-layer source order ended up putting `relative`
+   * after `fixed`, which made the dialog `position: relative` and broke
+   * vertical centering - modal anchored to where it would naturally flow
+   * in the document, which on long pages was visually near the bottom of
+   * the viewport. Components layer is below utilities in cascade order, so
+   * `.fixed` from the dialog primitive now correctly overrides.
+   */
+  .workspace-modal-shell {
+    @apply fixed inset-0 z-[200] flex items-center justify-center p-4;
+  }
+
+  .modal-backdrop-surface {
+    @apply bg-black/60 backdrop-blur-sm;
+  }
+
+  .workspace-modal-backdrop {
+    @apply absolute inset-0 bg-black/60 backdrop-blur-sm;
+  }
+
+  .workspace-modal-panel {
+    @apply relative bg-[#191919] border border-[#3E3E3E] rounded-xl shadow-[0_24px_80px_rgba(0,0,0,0.5)] overflow-hidden;
+  }
+
+  .ghost-blog-body {
+    overflow-wrap: break-word;
+  }
+
+  .ghost-blog-body > :first-child {
+    margin-top: 0;
+  }
+
+  .ghost-blog-body > :last-child {
+    margin-bottom: 0;
+  }
+
+  .ghost-blog-body a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+
+  .ghost-blog-body figure,
+  .ghost-blog-body .kg-card {
+    margin: 2rem 0;
+  }
+
+  .ghost-blog-body figure figcaption,
+  .ghost-blog-body .kg-card figcaption {
+    margin-top: 0.75rem;
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .ghost-blog-body img,
+  .ghost-blog-body picture,
+  .ghost-blog-body video,
+  .ghost-blog-body iframe,
+  .ghost-blog-body svg {
+    max-width: 100%;
+  }
+
+  .ghost-blog-body img,
+  .ghost-blog-body video,
+  .ghost-blog-body iframe {
+    border: 1px solid #3E3E3E;
+    border-radius: 0.75rem;
+    background: var(--background);
+  }
+
+  .ghost-blog-body img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .ghost-blog-body figure img,
+  .ghost-blog-body .kg-image-card img,
+  .ghost-blog-body .kg-gallery-image img {
+    margin: 0 auto;
+  }
+
+  .ghost-blog-body .kg-width-wide,
+  .ghost-blog-body .kg-width-full {
+    width: 100%;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .ghost-blog-body .kg-gallery-card,
+  .ghost-blog-body .kg-image-card {
+    clear: both;
+  }
+
+  .ghost-blog-body .kg-gallery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .ghost-blog-body .kg-gallery-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
+    gap: 0.75rem;
+  }
+
+  .ghost-blog-body .kg-gallery-image {
+    min-width: 0;
+  }
+
+  .ghost-blog-body .kg-gallery-image img {
+    height: 100%;
+    min-height: 12rem;
+    object-fit: cover;
+  }
+
+  .ghost-blog-body figure:has(svg),
+  .ghost-blog-body .kg-card:has(svg) {
+    overflow-x: auto;
+    padding: 1rem;
+    border: 1px solid #3E3E3E;
+    border-radius: 0.75rem;
+    background: color-mix(in oklab, var(--card) 70%, transparent);
+  }
+
+  .ghost-blog-body svg {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .ghost-blog-body table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border: 1px solid #3E3E3E;
+    border-radius: 0.75rem;
+    font-size: 0.9375rem;
+  }
+
+  .ghost-blog-body th,
+  .ghost-blog-body td {
+    border: 1px solid #3E3E3E;
+    padding: 0.75rem 1rem;
+    vertical-align: top;
+  }
+
+  .ghost-blog-body th {
+    background: color-mix(in oklab, var(--muted) 70%, transparent);
+    font-weight: 600;
+  }
+
+  .ghost-blog-body blockquote {
+    border-left: 3px solid oklch(0.75 0.17 55);
+    border-radius: 0 0.75rem 0.75rem 0;
+    background: color-mix(in oklab, oklch(0.75 0.17 55) 10%, transparent);
+    padding: 1rem 1.25rem;
+    color: var(--foreground);
+    font-style: normal;
+  }
+
+  .ghost-blog-body pre {
+    overflow-x: auto;
+    border: 1px solid #3E3E3E;
+    border-radius: 0.75rem;
+  }
+
+  .ghost-blog-body code {
+    overflow-wrap: anywhere;
+  }
+
+  .ghost-blog-body hr {
+    border-color: #3E3E3E;
+  }
+
+  .ghost-blog-body iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .ghost-blog-body .kg-embed-card iframe {
+    margin: 0 auto;
+  }
+
+  .ghost-blog-body .kg-bookmark-card {
+    border: 1px solid #3E3E3E;
+    border-radius: 0.75rem;
+    background: color-mix(in oklab, var(--card) 70%, transparent);
+  }
+
+  .ghost-blog-body .kg-bookmark-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(9rem, 32%);
+    gap: 1rem;
+    min-height: 9rem;
+    padding: 1rem;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .ghost-blog-body .kg-bookmark-title {
+    color: var(--foreground);
+    font-weight: 600;
+  }
+
+  .ghost-blog-body .kg-bookmark-description,
+  .ghost-blog-body .kg-bookmark-metadata {
+    margin-top: 0.5rem;
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  .ghost-blog-body .kg-bookmark-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 640px) {
+    .ghost-blog-body .kg-bookmark-container {
+      grid-template-columns: 1fr;
+    }
+
+    .ghost-blog-body .kg-gallery-row {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+/* Pulsing glow animation for insert line during content generation */
+@keyframes pulse-glow-line {
+  0%,
+  100% {
+    opacity: 0.5;
+    box-shadow: 0 0 3px 1px rgba(135, 169, 255, 0.2);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 8px 3px rgba(135, 169, 255, 0.4);
+  }
+}
+
+.animate-shimmer-line {
+  background: #87a9ff;
+  animation: pulse-glow-line 3s ease-in-out infinite;
+}
+
+/*
+ * .flowing-dots is the canonical loading-dot effect for Keyword Pro.
+ *
+ * Three literal period characters rendered as separate <span> children,
+ * each smoothly fading opacity 0.2 -> 1 -> 0.2 on a 1.4s ease-in-out loop,
+ * staggered 0.2s apart so the brightness sweeps left-to-right like a
+ * gentle wave. Always all three visible (never wipes to empty), never
+ * stepped, and never choppy.
+ *
+ * Render via the <FlowingDots /> React helper, not a class attribute:
+ *   src/components/article-chat/components/LoadingDots.tsx
+ *
+ * Only render when the surrounding state is actively loading. When work
+ * completes, unmount the component. The dots should vanish entirely,
+ * not fade in place.
+ *
+ * See wiki page "Flowing Dot Loader Style" for the full recipe.
+ */
+.flowing-dots {
+  display: inline-block;
+  margin-left: 1px;
+  font-weight: inherit;
+  color: inherit;
+}
+.flowing-dots > span {
+  display: inline-block;
+  opacity: 0.2;
+  animation: flowing-dot-wave 1.4s ease-in-out infinite;
+}
+.flowing-dots > span:nth-child(1) { animation-delay: 0s;   }
+.flowing-dots > span:nth-child(2) { animation-delay: 0.2s; }
+.flowing-dots > span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes flowing-dot-wave {
+  0%, 80%, 100% { opacity: 0.2; }
+  40%           { opacity: 1;   }
+}
+
+/*
+ * .saving-dots - DEPRECATED stepped ellipsis. Left in place only so that
+ * any lingering class references during the transition don't crash the
+ * page. Do NOT use for new code. Use <FlowingDots /> instead. This class
+ * will be deleted once all call sites have been migrated.
+ */
+.saving-dots::after {
+  content: '...';
+  display: inline-block;
+  width: 12px;
+  text-align: left;
+  animation: ellipsis 1.2s steps(4, end) infinite;
+}
+
+@keyframes ellipsis {
+  0% { content: ''; }
+  25% { content: '.'; }
+  50% { content: '..'; }
+  75%, 100% { content: '...'; }
+}
+
+/*
+ * .loading-dots - the standardized "flowing" three-dot loader.
+ *
+ * Three small circular dots that pulse opacity + scale in a staggered wave,
+ * inheriting the surrounding text color via currentColor. Used by the
+ * <LoadingDots /> component (src/components/article-chat/components/LoadingDots.tsx)
+ * which is the canonical loader for in-text status lines (outline thinking
+ * steps, draft thinking steps, and similar). Smooth, subtle, high-end -
+ * unlike the older `.saving-dots` which uses stepped CSS content cycling.
+ */
+.loading-dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+.loading-dots > span {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.25;
+  animation: loading-dot-flow 1.4s ease-in-out infinite;
+}
+.loading-dots > span:nth-child(1) { animation-delay: 0s; }
+.loading-dots > span:nth-child(2) { animation-delay: 0.18s; }
+.loading-dots > span:nth-child(3) { animation-delay: 0.36s; }
+
+@keyframes loading-dot-flow {
+  0%, 80%, 100% {
+    opacity: 0.25;
+    transform: scale(0.85);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/*
+ * Polish-stage visual effects.
+ *
+ * Two layers for the "article is still being polished" experience:
+ *
+ * 1. .polish-ambient - quiet container-level polish state. This deliberately
+ *    avoids a full-panel sweep; visible motion belongs to individual content
+ *    blocks so the article remains readable and high-end.
+ *
+ * 2. .polish-revealing - brief, faster shimmer sweep + gentle opacity
+ *    reveal played on the draft container whenever polish produces new
+ *    content. Telegraphs "a new version just arrived" without jarringly
+ *    replacing everything instantly. Plays for 1.8s then clears.
+ *
+ * Both effects live on pseudo-elements so they do not affect the text
+ * itself - the text stays crisp and fully readable throughout.
+ */
+
+.polish-ambient {
+  position: relative;
+  isolation: isolate;
+}
+.polish-ambient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(135, 169, 255, 0.045), transparent 32%),
+    linear-gradient(180deg, rgba(135, 169, 255, 0.025), transparent 42%);
+  border-radius: inherit;
+  mix-blend-mode: screen;
+  z-index: 1;
+}
+.polish-ambient > * {
+  position: relative;
+  z-index: 2;
+}
+
+.polish-revealing::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    transparent 32%,
+    rgba(135, 169, 255, 0.22) 45%,
+    rgba(155, 184, 255, 0.3) 50%,
+    rgba(135, 169, 255, 0.22) 55%,
+    transparent 68%,
+    transparent 100%
+  );
+  background-size: 240% 100%;
+  background-repeat: no-repeat;
+  animation: polish-reveal-sweep 1.8s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+  border-radius: inherit;
+  mix-blend-mode: screen;
+  z-index: 3;
+}
+
+@keyframes polish-reveal-sweep {
+  0%   { background-position: -80% 0; opacity: 0; }
+  12%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { background-position: 200% 0; opacity: 0; }
+}
+
+/*
+ * .polish-revealing-content - a very gentle opacity-and-filter pulse applied
+ * to the direct children of the draft container during the reveal window.
+ * Combines with the shimmer sweep above to give the impression the article
+ * is briefly "re-drawing" without destructively replacing the DOM.
+ */
+.polish-revealing > .polish-revealing-content {
+  animation: polish-reveal-content 1.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@keyframes polish-reveal-content {
+  0%   { opacity: 0.55; filter: saturate(0.85); }
+  30%  { opacity: 0.75; filter: saturate(0.95); }
+  100% { opacity: 1;    filter: saturate(1); }
+}
+
+/*
+ * Block-level draft polish effects.
+ *
+ * These restore the visual layer that ArticleChat's draft/post-processing
+ * logic still expects:
+ *
+ * - .polish-block-shimmer: subtle "still working" pulse on unchanged blocks
+ * - .typewriter-block: one-shot reveal for the first full draft appearance
+ * - .ghost-despawn / .ghost-respawn: changed blocks fade out/in during
+ *   post-processing replacements
+ *
+ * The motion language matches the breadcrumb flourish: slight blur,
+ * tiny vertical movement, and a restrained brightness lift rather than
+ * heavy transforms or neon glow.
+ */
+
+.polish-block-shimmer {
+  position: relative;
+  overflow: clip;
+  border-radius: 0.75rem;
+  contain: paint;
+}
+
+.polish-block-shimmer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    linear-gradient(
+      var(--polish-sweep-angle, 115deg),
+      transparent 0%,
+      transparent 34%,
+      rgba(217, 119, 87, 0.032) 43%,
+      rgba(135, 169, 255, 0.075) 49%,
+      rgba(255, 255, 255, 0.042) 51%,
+      rgba(135, 169, 255, 0.065) 56%,
+      transparent 66%,
+      transparent 100%
+    ),
+    linear-gradient(
+      calc(var(--polish-sweep-angle, 115deg) - 22deg),
+      transparent 0%,
+      transparent 18%,
+      rgba(135, 169, 255, 0.026) 34%,
+      rgba(255, 255, 255, 0.03) 39%,
+      rgba(217, 119, 87, 0.024) 48%,
+      transparent 64%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse at var(--polish-orbit-x, 22%) var(--polish-orbit-y, 0%),
+      rgba(135, 169, 255, 0.052),
+      transparent 42%
+    );
+  background-size: 300% 100%, 250% 100%, 190% 170%;
+  background-repeat: no-repeat;
+  animation: polish-block-waterfall var(--polish-sweep-cycle, 6.2s) cubic-bezier(0.45, 0, 0.2, 1) infinite;
+  animation-delay: var(--polish-delay, 0s);
+  mix-blend-mode: screen;
+  opacity: 0.82;
+  z-index: 1;
+  transform: translateZ(0);
+}
+
+.polish-block-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 1px auto 1px 0;
+  width: 2px;
+  pointer-events: none;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(135, 169, 255, 0.42),
+    transparent
+  );
+  opacity: 0;
+  animation: polish-block-accent var(--polish-accent-cycle, 5.2s) ease-in-out infinite;
+  animation-delay: var(--polish-delay, 0s);
+  z-index: 2;
+}
+
+.polish-block-shimmer > * {
+  position: relative;
+  z-index: 3;
+}
+
+.work-surface-loading,
+.polish-image-loading {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  contain: paint;
+}
+
+.work-surface-loading::before,
+.polish-image-loading::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    linear-gradient(
+      var(--polish-sweep-angle, 112deg),
+      transparent 0%,
+      transparent 30%,
+      rgba(217, 119, 87, 0.085) 42%,
+      rgba(135, 169, 255, 0.135) 50%,
+      rgba(255, 255, 255, 0.052) 53%,
+      rgba(217, 119, 87, 0.075) 61%,
+      transparent 72%,
+      transparent 100%
+    ),
+    linear-gradient(
+      64deg,
+      transparent 0%,
+      transparent 16%,
+      rgba(135, 169, 255, 0.038) 34%,
+      rgba(255, 255, 255, 0.028) 43%,
+      rgba(217, 119, 87, 0.034) 56%,
+      transparent 72%,
+      transparent 100%
+    ),
+    radial-gradient(
+      ellipse at 18% 0%,
+      rgba(135, 169, 255, 0.08),
+      transparent 36%
+    );
+  background-size: 320% 100%, 245% 100%, 160% 160%;
+  animation: polish-block-waterfall var(--polish-sweep-cycle, 5.9s) cubic-bezier(0.45, 0, 0.2, 1) infinite;
+  mix-blend-mode: screen;
+  z-index: 1;
+  transform: translateZ(0);
+}
+
+.work-surface-loading::after,
+.polish-image-loading::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(135, 169, 255, 0.035) 34%,
+      rgba(217, 119, 87, 0.04) 52%,
+      transparent 78%
+    );
+  background-size: 100% 220%;
+  animation: polish-surface-tide var(--polish-tide-cycle, 7.6s) ease-in-out infinite alternate;
+  mix-blend-mode: screen;
+  opacity: 0.75;
+  z-index: 1;
+  transform: translateZ(0);
+}
+
+.work-surface-loading > :not(.absolute),
+.polish-image-loading > :not(.absolute) {
+  position: relative;
+  z-index: 2;
+}
+
+.work-surface-loading > .absolute,
+.polish-image-loading > .absolute {
+  z-index: 2;
+}
+
+.work-surface-loading > .polish-loading-backdrop,
+.polish-image-loading > .polish-loading-backdrop {
+  z-index: 0;
+}
+
+@keyframes polish-block-waterfall {
+  0%   { background-position: -118% 0, -48% 0, 0% 0%; opacity: 0.58; }
+  12%  { opacity: 0.68; }
+  32%  { opacity: 0.78; }
+  58%  { opacity: 0.66; }
+  82%  { background-position: 220% 0, 78% 0, 96% 42%; opacity: 0.44; }
+  100% { background-position: 270% 0, 126% 0, 116% 54%; opacity: 0.3; }
+}
+
+@keyframes polish-surface-tide {
+  0%   { background-position: 0% -90%; opacity: 0.42; }
+  42%  { opacity: 0.82; }
+  100% { background-position: 0% 145%; opacity: 0.56; }
+}
+
+@keyframes polish-block-accent {
+  0%, 100% { opacity: 0; transform: translateY(14%); }
+  34% { opacity: 0.28; transform: translateY(3%); }
+  56% { opacity: 0.42; transform: translateY(-2%); }
+  76% { opacity: 0; transform: translateY(-12%); }
+}
+
+.typewriter-block {
+  position: relative;
+  overflow: clip;
+  animation: draft-typewriter-reveal var(--typewriter-duration, 1.8s)
+    cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation-delay: var(--typewriter-delay, 0ms);
+  will-change: clip-path, opacity, filter, transform;
+}
+
+.typewriter-block::after {
+  content: '';
+  position: absolute;
+  top: 0.35rem;
+  bottom: 0.35rem;
+  right: 0;
+  width: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    rgba(155, 184, 255, 0.15) 0%,
+    rgba(155, 184, 255, 0.95) 25%,
+    rgba(135, 169, 255, 1) 50%,
+    rgba(155, 184, 255, 0.95) 75%,
+    rgba(155, 184, 255, 0.15) 100%
+  );
+  box-shadow: 0 0 10px rgba(135, 169, 255, 0.28);
+  animation: draft-typewriter-caret var(--typewriter-duration, 1.8s)
+    steps(1, end) both;
+  animation-delay: var(--typewriter-delay, 0ms);
+  pointer-events: none;
+}
+
+@keyframes draft-typewriter-reveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0.48;
+    filter: blur(4px) brightness(0.92);
+    transform: translateY(-2px);
+  }
+  55% {
+    opacity: 0.88;
+    filter: blur(1px) brightness(1.02);
+    transform: translateY(0);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+    filter: blur(0) brightness(1);
+    transform: translateY(0);
+  }
+}
+
+@keyframes draft-typewriter-caret {
+  0%, 85% {
+    opacity: 1;
+  }
+  90%, 100% {
+    opacity: 0;
+  }
+}
+
+.ghost-despawn {
+  animation: draft-ghost-despawn 1.05s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation-delay: var(--ghost-delay, 0ms);
+  will-change: opacity, filter, transform, clip-path;
+}
+
+.ghost-respawn {
+  animation: draft-ghost-respawn 1.2s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation-delay: var(--ghost-delay, 0ms);
+  will-change: opacity, filter, transform, clip-path;
+}
+
+@keyframes draft-ghost-despawn {
+  0% {
+    opacity: 1;
+    filter: blur(0) brightness(1);
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(6px) brightness(1.06);
+    transform: translateY(4px);
+    clip-path: inset(0 0 0 16%);
+  }
+}
+
+@keyframes draft-ghost-respawn {
+  0% {
+    opacity: 0;
+    filter: blur(6px) brightness(0.96);
+    transform: translateY(-4px);
+    clip-path: inset(0 16% 0 0);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0) brightness(1);
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* Accessibility: disable animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
+  }
+}
+
+
+/* ========================================================================
+   Docs theme. Fumadocs token overrides matching the homepage design
+   language (border-#3E3E3E, rounded-xl, orange-400 accent, font-semibold H1).
+   Scope: only the docs route. Placed at the end of the file so the
+   docs-scoped selectors win without `!important`.
+   References:
+   - Fumadocs default tokens: node_modules/fumadocs-ui/css/lib/default-colors.css
+   - Product design tokens: this file and the research console components
+   ======================================================================== */
+
+/* Light + dark Fumadocs token remap inside #nd-docs-layout (docs root). */
+#nd-docs-layout {
+  --color-fd-border: #3E3E3E;
+  --color-fd-accent: oklch(0.75 0.17 55 / 0.15);
+  --color-fd-accent-foreground: oklch(0.75 0.17 55);
+  --color-fd-primary: oklch(0.75 0.17 55);
+  --color-fd-primary-foreground: hsl(0, 0%, 9%);
+  --color-fd-ring: oklch(0.75 0.17 55);
+}
+
+.dark #nd-docs-layout {
+  --color-fd-border: #3E3E3E;
+  --color-fd-accent: oklch(0.75 0.17 55 / 0.18);
+  --color-fd-accent-foreground: oklch(0.85 0.17 60);
+  --color-fd-primary: oklch(0.78 0.18 55);
+  --color-fd-primary-foreground: hsl(0, 0%, 9%);
+  --color-fd-ring: oklch(0.78 0.18 55);
+}
+
+/* Heading hierarchy - match landing page rule (H1 semibold, H2 normal). */
+#nd-docs-layout h1 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+#nd-docs-layout h2 {
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* Code blocks pick up homepage card styling. */
+#nd-docs-layout pre[data-language],
+#nd-docs-layout figure[data-rehype-pretty-code-figure] pre {
+  border: 1px solid #3E3E3E;
+  border-radius: 0.75rem; /* rounded-xl */
+}
+
+/* Callouts (note / tip / warning blocks) get the bordered-pill aesthetic. */
+#nd-docs-layout div[role="note"],
+#nd-docs-layout aside[role="note"] {
+  border-radius: 0.75rem;
+  border-color: #3E3E3E;
+}
+
+/* Active TOC link uses orange accent for visual continuity with hero CTA. */
+#nd-docs-layout a[data-active="true"][data-anchor],
+#nd-docs-layout a[aria-current="true"][data-anchor] {
+  color: oklch(0.75 0.17 55);
+}

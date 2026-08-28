@@ -1,0 +1,37 @@
+name: keyword-pro
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: keyword_pro
+      POSTGRES_PASSWORD: keyword_pro # pragma: allowlist secret
+      POSTGRES_USER: keyword_pro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U keyword_pro -d keyword_pro"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    ports:
+      - "127.0.0.1:5434:5432"
+    restart: unless-stopped
+    volumes:
+      - keyword-pro-postgres:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    ports:
+      - "127.0.0.1:6381:6379"
+    restart: unless-stopped
+    volumes:
+      - keyword-pro-redis:/data
+
+volumes:
+  keyword-pro-postgres:
+  keyword-pro-redis:

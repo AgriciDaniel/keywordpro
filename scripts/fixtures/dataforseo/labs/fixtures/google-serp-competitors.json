@@ -1,0 +1,78 @@
+{
+  "version": "synthetic-v1",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0 sec.",
+  "cost": 0,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "synthetic-task-id",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0 sec.",
+      "cost": 0,
+      "result_count": 1,
+      "path": [
+        "dataforseo_labs",
+        "google",
+        "serp_competitors",
+        "live"
+      ],
+      "data": {
+        "synthetic": true
+      },
+      "result": [
+        {
+          "se_type": "google",
+          "seed_keywords": [
+            "keyword pro demo"
+          ],
+          "location_code": 2840,
+          "language_code": "en",
+          "total_count": 3,
+          "items_count": 3,
+          "items": [
+            {
+              "domain": "competitor-1.example.invalid",
+              "avg_position": 2.5,
+              "intersections": 8,
+              "total_count": 12,
+              "full_domain_metrics": {
+                "organic": {
+                  "etv": 1200,
+                  "count": 80
+                }
+              }
+            },
+            {
+              "domain": "competitor-2.example.invalid",
+              "avg_position": 5.6,
+              "intersections": 7,
+              "total_count": 16,
+              "full_domain_metrics": {
+                "organic": {
+                  "etv": 1050,
+                  "count": 70
+                }
+              }
+            },
+            {
+              "domain": "competitor-3.example.invalid",
+              "avg_position": 8.7,
+              "intersections": 6,
+              "total_count": 20,
+              "full_domain_metrics": {
+                "organic": {
+                  "etv": 900,
+                  "count": 60
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

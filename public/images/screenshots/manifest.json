@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "capture": {
+    "application": "Keyword Pro local interface",
+    "data": "deterministic synthetic demo report",
+    "networkProviderRequests": 0,
+    "providerCost": 0,
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "images": {
+    "audience-regions.png": "a0764372525beefcf6e56afff6dc69de9de0057f88aa0a694674dd6e13237372",
+    "connections.png": "c24cf025e6e82cccfc9c2118e2301013fe89b1ca36307999e3645db17ff0b548",
+    "keyword-details.png": "9e3bbbbb20c194674674629d15980158166e7169b2c08df53a11829d966176fe",
+    "keyword-table.png": "c561cc0310a3377fdd169375989fd3929ad540efc9b5daa862ed754fa4fe2868",
+    "opportunity-difficulty.png": "6ab392df5c48435703c5e4ee39aefd224897c727b8e2c1dced906ff5b7f6e128",
+    "query-discovery.png": "9ff29338cd045f0ba7dbbba9ce824f43bd037fcae1909f47adaedd06818a4211",
+    "report-overview.png": "77aac2beaa6ca60f28c41a3904cf8ce718728610b15090fd64c11d8a6808d5f5",
+    "trends-history.png": "0bbc82f2408f6e119e406b39d066871cf93ec2d416135a35b66934c0be7eff76"
+  }
+}

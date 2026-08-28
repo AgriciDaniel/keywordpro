@@ -1,0 +1,133 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.4.4/schema.json",
+  "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": false
+  },
+  "files": {
+    "ignoreUnknown": true,
+    "maxSize": 104857600,
+    "includes": [
+      "**",
+      "!**/.next",
+      "!**/.open-next",
+      "!**/.vercel",
+      "!**/.wrangler",
+      "!**/next-env.d.ts",
+      "!**/.cursor",
+      "!**/.claude",
+      "!**/.kiro",
+      "!**/.conductor",
+      "!**/.vscode",
+      "!**/.source",
+      "!**/.obsidian",
+      "!**/.tmp",
+      "!**/node_modules",
+      "!**/dist",
+      "!**/build",
+      "!**/.backup",
+      "!**/playwright-report",
+      "!**/*.html",
+      "!**/src/db",
+      "!**/tailwind.config.ts",
+      "!**/src/styles/mdx.css",
+      "!**/src/components/ui/*.tsx",
+      "!**/src/components/magicui/*.tsx",
+      "!**/src/components/diceui/*.tsx",
+      "!**/src/components/animate-ui/*.tsx",
+      "!**/src/components/tailark/*.tsx",
+      "!**/src/components/ai-elements/*.tsx",
+      "!**/src/components/data-collection-beta",
+      "!**/src/components/data-table",
+      "!**/src/app/\\[\\[\\]locale\\]/preview",
+      "!**/src/payment/types.ts",
+      "!**/src/credits/types.ts",
+      "!**/src/types/index.d.ts"
+    ]
+  },
+  "formatter": {
+    "enabled": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 80,
+    "formatWithErrors": true,
+    "useEditorconfig": true
+  },
+  "assist": {
+    "actions": {
+      "source": {
+        "organizeImports": "off"
+      }
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noSparseArray": "off",
+        "noArrayIndexKey": "off",
+        "noExplicitAny": "off",
+        "noShadowRestrictedNames": "off",
+        "noImplicitAnyLet": "off",
+        "noAssignInExpressions": "off",
+        "useIterableCallbackReturn": "off",
+        "noFallthroughSwitchClause": "off",
+        "noDoubleEquals": "off",
+        "noLabelVar": "off",
+        "noThenProperty": "off",
+        "noControlCharactersInRegex": "off"
+      },
+      "complexity": {
+        "noForEach": "off"
+      },
+      "correctness": {
+        "useExhaustiveDependencies": "off",
+        "useHookAtTopLevel": "off",
+        "noInvalidUseBeforeDeclaration": "off",
+        "noSwitchDeclarations": "off",
+        "noInnerDeclarations": "off",
+        "noConstructorReturn": "off",
+        "noConstantCondition": "off",
+        "useValidTypeof": "off"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "off",
+        "noDangerouslySetInnerHtmlWithChildren": "off"
+      },
+      "style": {
+        "useTemplate": "off",
+        "noNonNullAssertion": "off",
+        "useNodejsImportProtocol": "off",
+        "useConsistentArrayType": {
+          "level": "off",
+          "options": {
+            "syntax": "shorthand"
+          }
+        }
+      },
+      "a11y": {
+        "useValidAnchor": "off",
+        "noSvgWithoutTitle": "off",
+        "useKeyWithClickEvents": "off",
+        "noStaticElementInteractions": "off",
+        "useAriaPropsSupportedByRole": "off",
+        "useSemanticElements": "off",
+        "useHtmlLang": "off"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "trailingCommas": "es5",
+      "semicolons": "always"
+    }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "version": "synthetic-v1",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0 sec.",
+  "cost": 0,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "synthetic-task-id",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0 sec.",
+      "cost": 0,
+      "result_count": 1,
+      "path": [
+        "keywords_data",
+        "clickstream_data",
+        "dataforseo_search_volume",
+        "live"
+      ],
+      "data": {
+        "synthetic": true
+      },
+      "result": [
+        {
+          "location_code": 2840,
+          "language_code": "en",
+          "use_clickstream": true,
+          "items_count": 1,
+          "items": [
+            {
+              "keyword": "keyword pro demo",
+              "search_volume": 1750,
+              "monthly_searches": [
+                {
+                  "month": 9,
+                  "search_volume": 1200,
+                  "year": 2025
+                },
+                {
+                  "month": 10,
+                  "search_volume": 1250,
+                  "year": 2025
+                },
+                {
+                  "month": 11,
+                  "search_volume": 1300,
+                  "year": 2025
+                },
+                {
+                  "month": 12,
+                  "search_volume": 1350,
+                  "year": 2025
+                },
+                {
+                  "month": 1,
+                  "search_volume": 1400,
+                  "year": 2026
+                },
+                {
+                  "month": 2,
+                  "search_volume": 1450,
+                  "year": 2026
+                },
+                {
+                  "month": 3,
+                  "search_volume": 1500,
+                  "year": 2026
+                },
+                {
+                  "month": 4,
+                  "search_volume": 1550,
+                  "year": 2026
+                },
+                {
+                  "month": 5,
+                  "search_volume": 1600,
+                  "year": 2026
+                },
+                {
+                  "month": 6,
+                  "search_volume": 1650,
+                  "year": 2026
+                },
+                {
+                  "month": 7,
+                  "search_volume": 1700,
+                  "year": 2026
+                },
+                {
+                  "month": 8,
+                  "search_volume": 1750,
+                  "year": 2026
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

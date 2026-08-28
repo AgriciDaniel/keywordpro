@@ -1,0 +1,146 @@
+{
+  "version": "synthetic-v1",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0 sec.",
+  "cost": 0,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "synthetic-task-id",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0 sec.",
+      "cost": 0,
+      "result_count": 1,
+      "path": [
+        "content_analysis",
+        "search",
+        "live"
+      ],
+      "data": {
+        "synthetic": true
+      },
+      "result": [
+        {
+          "offset_token": "synthetic-offset-token",
+          "total_count": 5,
+          "items_count": 5,
+          "items": [
+            {
+              "url": "https://result-1.example.invalid/guide",
+              "domain": "result-1.example.invalid",
+              "url_rank": 1,
+              "domain_rank": 80,
+              "page_types": [
+                "html"
+              ],
+              "page_category": [
+                "synthetic"
+              ],
+              "language": "en",
+              "country": "US",
+              "spam_score": 0,
+              "content_info": {
+                "title": "Synthetic keyword guide 1",
+                "snippet": "Synthetic search result used only for deterministic interface verification.",
+                "date_published": "2026-01-01",
+                "author": "Example Author",
+                "content_quality_score": 80
+              }
+            },
+            {
+              "url": "https://result-2.example.invalid/guide",
+              "domain": "result-2.example.invalid",
+              "url_rank": 2,
+              "domain_rank": 76,
+              "page_types": [
+                "html"
+              ],
+              "page_category": [
+                "synthetic"
+              ],
+              "language": "en",
+              "country": "US",
+              "spam_score": 0,
+              "content_info": {
+                "title": "Synthetic keyword guide 2",
+                "snippet": "Synthetic search result used only for deterministic interface verification.",
+                "date_published": "2026-02-01",
+                "author": "Example Author",
+                "content_quality_score": 81
+              }
+            },
+            {
+              "url": "https://result-3.example.invalid/guide",
+              "domain": "result-3.example.invalid",
+              "url_rank": 3,
+              "domain_rank": 72,
+              "page_types": [
+                "html"
+              ],
+              "page_category": [
+                "synthetic"
+              ],
+              "language": "en",
+              "country": "US",
+              "spam_score": 0,
+              "content_info": {
+                "title": "Synthetic keyword guide 3",
+                "snippet": "Synthetic search result used only for deterministic interface verification.",
+                "date_published": "2026-03-01",
+                "author": "Example Author",
+                "content_quality_score": 82
+              }
+            },
+            {
+              "url": "https://result-4.example.invalid/guide",
+              "domain": "result-4.example.invalid",
+              "url_rank": 4,
+              "domain_rank": 68,
+              "page_types": [
+                "html"
+              ],
+              "page_category": [
+                "synthetic"
+              ],
+              "language": "en",
+              "country": "US",
+              "spam_score": 0,
+              "content_info": {
+                "title": "Synthetic keyword guide 4",
+                "snippet": "Synthetic search result used only for deterministic interface verification.",
+                "date_published": "2026-04-01",
+                "author": "Example Author",
+                "content_quality_score": 83
+              }
+            },
+            {
+              "url": "https://result-5.example.invalid/guide",
+              "domain": "result-5.example.invalid",
+              "url_rank": 5,
+              "domain_rank": 64,
+              "page_types": [
+                "html"
+              ],
+              "page_category": [
+                "synthetic"
+              ],
+              "language": "en",
+              "country": "US",
+              "spam_score": 0,
+              "content_info": {
+                "title": "Synthetic keyword guide 5",
+                "snippet": "Synthetic search result used only for deterministic interface verification.",
+                "date_published": "2026-05-01",
+                "author": "Example Author",
+                "content_quality_score": 84
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

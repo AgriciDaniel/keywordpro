@@ -1,0 +1,25 @@
+# EditorConfig helps maintain consistent coding styles across different editors and IDEs
+# Visit https://editorconfig.org/ for more information
+# Top-most EditorConfig file, no other .editorconfig files should be read in parent directories
+
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md,*.mdx]
+trim_trailing_whitespace = false
+
+[*.js,*.ts]
+quote_type = single
+
+[{*.c,*.cc,*.h,*.hh,*.cpp,*.hpp,*.m,*.mm,*.mpp,*.js,*.java,*.go,*.rs,*.php,*.ng,*.jsx,*.ts,*.d,*.cs,*.swift}]
+curly_bracket_next_line = false
+spaces_around_operators = true
+spaces_around_brackets = outside
+indent_brace_style = K&R

@@ -1,0 +1,48 @@
+name: Feature request
+description: Propose a focused improvement to Keyword Pro
+title: "feature: "
+body:
+  - type: markdown
+    attributes:
+      value: Keep proposals within the local-first, keyword-research product boundary.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user problem should this solve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe the smallest useful result, without prescribing an implementation when it is not necessary.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and alternatives
+      description: Add examples, alternatives considered, and any privacy, cost, or provider constraints.
+
+  - type: dropdown
+    id: paid-call
+    attributes:
+      label: Would validating this require a paid DataForSEO call?
+      options:
+        - No
+        - Yes
+        - Unsure
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Product boundary
+      options:
+        - label: This proposal is limited to keyword research.
+          required: true

@@ -1,0 +1,217 @@
+{
+  "version": "synthetic-v1",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0 sec.",
+  "cost": 0,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "synthetic-task-id",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0 sec.",
+      "cost": 0,
+      "result_count": 1,
+      "path": [
+        "keywords_data",
+        "google_trends",
+        "explore",
+        "live"
+      ],
+      "data": {
+        "synthetic": true
+      },
+      "result": [
+        {
+          "keywords": [
+            "keyword pro demo"
+          ],
+          "type": "web",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://trends.example.invalid/synthetic",
+          "datetime": "2026-08-28 00:00:00 +00:00",
+          "items_count": 2,
+          "items": [
+            {
+              "type": "google_trends_graph",
+              "data": [
+                {
+                  "date_from": "2025-01-01",
+                  "date_to": "2025-01-28",
+                  "values": [
+                    {
+                      "keyword": "keyword pro demo",
+                      "value": 35
+                    }
+                  ]
+                },
+                {
+                  "date_from": "2025-02-01",
+                  "date_to": "2025-02-28",
+                  "values": [
+                    {
+                      "keyword": "keyword pro demo",
+                      "value": 39
+                    }
+                  ]
+                },
+                {
+                  "date_from": "2025-03-01",
+                  "date_to": "2025-03-28",
+                  "values": [
+                    {
+                      "keyword": "keyword pro demo",
+                      "value": 43
+                    }
+                  ]
+                },
+                {
+                  "date_from": "2025-04-01",
+                  "date_to": "2025-04-28",
+                  "values": [
+                    {
+                      "keyword": "keyword pro demo",
+                      "value": 47
+                    }
+                  ]
+                },
+                {
+                  "date_from": "2025-05-01",
+                  "date_to": "2025-05-28",
+                  "values": [
+                    {
+                      "keyword": "keyword pro demo",
+                      "value": 51
+                    }
+                  ]
+                },
+                {
+                  "date_from": "2025-06-01",
+                  "date_to": "2025-06-28",
+                  "values": [
+                    {
+                      "keyword": "keyword pro demo",
+                      "value": 55
+                    }
+                  ]
+                },
+                {
+                  "date_from": "2025-07-01",
+                  "date_to": "2025-07-28",
+                  "values": [
+                    {
+                      "keyword": "keyword pro demo",
+                      "value": 59
+                    }
+                  ]
+                },
+                {
+                  "date_from": "2025-08-01",
+                  "date_to": "2025-08-28",
+                  "values": [
+                    {
+                      "keyword": "keyword pro demo",
+                      "value": 63
+                    }
+                  ]
+                },
+                {
+                  "date_from": "2025-09-01",
+                  "date_to": "2025-09-28",
+                  "values": [
+                    {
+                      "keyword": "keyword pro demo",
+                      "value": 67
+                    }
+                  ]
+                },
+                {
+                  "date_from": "2025-10-01",
+                  "date_to": "2025-10-28",
+                  "values": [
+                    {
+                      "keyword": "keyword pro demo",
+                      "value": 71
+                    }
+                  ]
+                },
+                {
+                  "date_from": "2025-11-01",
+                  "date_to": "2025-11-28",
+                  "values": [
+                    {
+                      "keyword": "keyword pro demo",
+                      "value": 75
+                    }
+                  ]
+                },
+                {
+                  "date_from": "2025-12-01",
+                  "date_to": "2025-12-28",
+                  "values": [
+                    {
+                      "keyword": "keyword pro demo",
+                      "value": 79
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "google_trends_queries_list",
+              "data": {
+                "top": [
+                  {
+                    "query": "synthetic top query 1",
+                    "value": 100
+                  },
+                  {
+                    "query": "synthetic top query 2",
+                    "value": 92
+                  },
+                  {
+                    "query": "synthetic top query 3",
+                    "value": 84
+                  },
+                  {
+                    "query": "synthetic top query 4",
+                    "value": 76
+                  },
+                  {
+                    "query": "synthetic top query 5",
+                    "value": 68
+                  }
+                ],
+                "rising": [
+                  {
+                    "query": "synthetic rising query 1",
+                    "value": 120
+                  },
+                  {
+                    "query": "synthetic rising query 2",
+                    "value": 135
+                  },
+                  {
+                    "query": "synthetic rising query 3",
+                    "value": 150
+                  },
+                  {
+                    "query": "synthetic rising query 4",
+                    "value": 165
+                  },
+                  {
+                    "query": "synthetic rising query 5",
+                    "value": 180
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

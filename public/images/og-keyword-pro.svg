@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <title>Keyword Pro</title>
+  <desc>Minimal Keyword Pro social preview in the application colour system.</desc>
+
+  <rect width="1200" height="630" fill="#1F1F1F"/>
+
+  <g transform="translate(122 190)">
+    <rect x="0" y="112" width="38" height="98" rx="19" fill="#F4F1EA"/>
+    <rect x="62" y="64" width="38" height="146" rx="19" fill="#F4F1EA"/>
+    <rect x="124" y="16" width="38" height="194" rx="19" fill="#F97316"/>
+  </g>
+
+  <path d="M340 150V480" stroke="#FFFFFF" stroke-opacity="0.1"/>
+
+  <text x="410" y="280" fill="#F4F1EA" font-family="Noto Sans, Arial, sans-serif" font-size="76" font-weight="600" letter-spacing="-2">Keyword</text>
+  <text x="741" y="280" fill="#F97316" font-family="Noto Sans, Arial, sans-serif" font-size="76" font-weight="600" letter-spacing="-2">Pro</text>
+  <text x="414" y="342" fill="#A6A199" font-family="Noto Sans, Arial, sans-serif" font-size="25" font-weight="400">Keyword research, SERP analysis, trends, and exports.</text>
+
+  <path d="M414 412H1080" stroke="#FFFFFF" stroke-opacity="0.1"/>
+  <path d="M414 412H462" stroke="#F97316" stroke-width="2"/>
+
+  <text x="414" y="458" fill="#79756E" font-family="Noto Sans, Arial, sans-serif" font-size="16" font-weight="500" letter-spacing="2.4">LOCAL KEYWORD RESEARCH</text>
+</svg>

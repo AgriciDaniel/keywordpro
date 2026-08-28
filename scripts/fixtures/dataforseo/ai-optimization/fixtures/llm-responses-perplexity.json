@@ -1,0 +1,63 @@
+{
+  "version": "synthetic-v1",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0 sec.",
+  "cost": 0,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "synthetic-task-id",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0 sec.",
+      "cost": 0,
+      "result_count": 1,
+      "path": [
+        "ai_optimization",
+        "perplexity",
+        "llm_responses",
+        "live"
+      ],
+      "data": {
+        "synthetic": true
+      },
+      "result": [
+        {
+          "model_name": "synthetic-perplexity-model",
+          "input_tokens": 24,
+          "output_tokens": 96,
+          "reasoning_tokens": 12,
+          "web_search": true,
+          "money_spent": 0,
+          "datetime": "2026-08-28 00:00:00 +00:00",
+          "fan_out_queries": [
+            "synthetic keyword research workflow"
+          ],
+          "items": [
+            {
+              "sections": [
+                {
+                  "type": "text",
+                  "text": "This fully synthetic answer explains a demo keyword workflow. It exists only to exercise rendering, citations, exports, and response-shape handling without reproducing any provider response.",
+                  "annotations": [
+                    {
+                      "title": "Synthetic documentation",
+                      "url": "https://docs.example.invalid/keyword-research"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "text": "Use the example values to verify the interface, then connect your own account for live research.",
+                  "annotations": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support and usage questions
+    url: https://github.com/AgriciDaniel/keywordpro/blob/main/SUPPORT.md
+    about: Read setup help and choose the right support channel.
+  - name: Security report
+    url: https://github.com/AgriciDaniel/keywordpro/security/advisories/new
+    about: Report suspected vulnerabilities privately. Do not open a public issue.

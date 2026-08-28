@@ -1,0 +1,185 @@
+{
+  "version": "synthetic-v1",
+  "status_code": 20000,
+  "status_message": "Ok.",
+  "time": "0 sec.",
+  "cost": 0,
+  "tasks_count": 1,
+  "tasks_error": 0,
+  "tasks": [
+    {
+      "id": "synthetic-task-id",
+      "status_code": 20000,
+      "status_message": "Ok.",
+      "time": "0 sec.",
+      "cost": 0,
+      "result_count": 1,
+      "path": [
+        "serp",
+        "google",
+        "organic",
+        "live",
+        "advanced"
+      ],
+      "data": {
+        "synthetic": true
+      },
+      "result": [
+        {
+          "keyword": "keyword pro demo",
+          "type": "organic",
+          "se_domain": "search.example.invalid",
+          "location_code": 2840,
+          "language_code": "en",
+          "check_url": "https://search.example.invalid/synthetic-results",
+          "datetime": "2026-08-28 00:00:00 +00:00",
+          "item_types": [
+            "organic",
+            "people_also_ask",
+            "related_searches"
+          ],
+          "se_results_count": 125000,
+          "pages_count": 1,
+          "items_count": 10,
+          "items": [
+            {
+              "type": "organic",
+              "rank_group": 1,
+              "rank_absolute": 1,
+              "title": "Synthetic search result 1",
+              "description": "A synthetic result used to verify SERP rendering without redistributing search content.",
+              "breadcrumb": "Example > Guide 1",
+              "url": "https://organic-1.example.invalid/guide",
+              "domain": "organic-1.example.invalid",
+              "is_image": false,
+              "is_featured_snippet": true,
+              "rating": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 2,
+              "rank_absolute": 2,
+              "title": "Synthetic search result 2",
+              "description": "A synthetic result used to verify SERP rendering without redistributing search content.",
+              "breadcrumb": "Example > Guide 2",
+              "url": "https://organic-2.example.invalid/guide",
+              "domain": "organic-2.example.invalid",
+              "is_image": false,
+              "is_featured_snippet": false,
+              "rating": {
+                "value": 4.5,
+                "votes_count": 24
+              }
+            },
+            {
+              "type": "organic",
+              "rank_group": 3,
+              "rank_absolute": 3,
+              "title": "Synthetic search result 3",
+              "description": "A synthetic result used to verify SERP rendering without redistributing search content.",
+              "breadcrumb": "Example > Guide 3",
+              "url": "https://organic-3.example.invalid/guide",
+              "domain": "organic-3.example.invalid",
+              "is_image": false,
+              "is_featured_snippet": false,
+              "rating": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 4,
+              "rank_absolute": 4,
+              "title": "Synthetic search result 4",
+              "description": "A synthetic result used to verify SERP rendering without redistributing search content.",
+              "breadcrumb": "Example > Guide 4",
+              "url": "https://organic-4.example.invalid/guide",
+              "domain": "organic-4.example.invalid",
+              "is_image": false,
+              "is_featured_snippet": false,
+              "rating": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 5,
+              "rank_absolute": 5,
+              "title": "Synthetic search result 5",
+              "description": "A synthetic result used to verify SERP rendering without redistributing search content.",
+              "breadcrumb": "Example > Guide 5",
+              "url": "https://organic-5.example.invalid/guide",
+              "domain": "organic-5.example.invalid",
+              "is_image": false,
+              "is_featured_snippet": false,
+              "rating": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 6,
+              "rank_absolute": 6,
+              "title": "Synthetic search result 6",
+              "description": "A synthetic result used to verify SERP rendering without redistributing search content.",
+              "breadcrumb": "Example > Guide 6",
+              "url": "https://organic-6.example.invalid/guide",
+              "domain": "organic-6.example.invalid",
+              "is_image": false,
+              "is_featured_snippet": false,
+              "rating": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 7,
+              "rank_absolute": 7,
+              "title": "Synthetic search result 7",
+              "description": "A synthetic result used to verify SERP rendering without redistributing search content.",
+              "breadcrumb": "Example > Guide 7",
+              "url": "https://organic-7.example.invalid/guide",
+              "domain": "organic-7.example.invalid",
+              "is_image": false,
+              "is_featured_snippet": false,
+              "rating": null
+            },
+            {
+              "type": "organic",
+              "rank_group": 8,
+              "rank_absolute": 8,
+              "title": "Synthetic search result 8",
+              "description": "A synthetic result used to verify SERP rendering without redistributing search content.",
+              "breadcrumb": "Example > Guide 8",
+              "url": "https://organic-8.example.invalid/guide",
+              "domain": "organic-8.example.invalid",
+              "is_image": false,
+              "is_featured_snippet": false,
+              "rating": null
+            },
+            {
+              "type": "people_also_ask",
+              "rank_group": 9,
+              "rank_absolute": 9,
+              "title": "Synthetic questions",
+              "items": [
+                {
+                  "title": "How does the synthetic keyword demo work?"
+                },
+                {
+                  "title": "Can the demo make paid calls?"
+                }
+              ]
+            },
+            {
+              "type": "related_searches",
+              "rank_group": 10,
+              "rank_absolute": 10,
+              "title": "Synthetic related searches",
+              "items": [
+                {
+                  "title": "synthetic keyword workflow"
+                },
+                {
+                  "title": "local keyword demo"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

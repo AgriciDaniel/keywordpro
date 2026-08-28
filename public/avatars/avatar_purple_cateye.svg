@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      @keyframes blink {
+        0%, 90%, 100% { transform: scaleY(1); }
+        93%, 97% { transform: scaleY(0.1); }
+      }
+      
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        25% { transform: translateY(-8px) rotate(-1deg); }
+        50% { transform: translateY(0) rotate(0deg); }
+        75% { transform: translateY(-5px) rotate(1deg); }
+      }
+      
+      @keyframes eyebrowRaise {
+        0%, 85%, 100% { transform: translateY(0); }
+        88%, 92% { transform: translateY(-4px); }
+      }
+      
+      @keyframes subtleGlow {
+        0%, 100% { filter: drop-shadow(0 0 0px rgba(168, 85, 247, 0)); }
+        50% { filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.3)); }
+      }
+      
+      .eye {
+        animation: blink 5s infinite;
+      }
+      
+      .character {
+        animation: bounce 3s ease-in-out infinite, subtleGlow 4s ease-in-out infinite;
+        transform-origin: center;
+      }
+      
+      .eyebrow {
+        transform-origin: center;
+        animation: eyebrowRaise 7s infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Character Group with bounce animation -->
+  <g class="character">
+    <!-- Main Head Circle -->
+    <circle cx="256" cy="256" r="180" fill="#A855F7"/>
+    
+    <!-- Head Outline -->
+    <circle cx="256" cy="256" r="180" fill="none" stroke="#3D3D3D" stroke-width="8"/>
+
+    <!-- CAT-EYE GLASSES GROUP -->
+    <g fill="none" stroke="#3D3D3D" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Left Lens (cat-eye shape with upward sweep) -->
+      <path d="M 140 256 L 160 230 L 220 230 L 230 240 L 220 280 L 160 280 Z"/>
+      
+      <!-- Right Lens (cat-eye shape with upward sweep) -->
+      <path d="M 372 256 L 352 230 L 292 230 L 282 240 L 292 280 L 352 280 Z"/>
+      
+      <!-- Bridge -->
+      <line x1="230" y1="250" x2="282" y2="250"/>
+      
+      <!-- Left Temple Arm (angled down) -->
+      <path d="M 140 256 L 85 265"/>
+      
+      <!-- Right Temple Arm (angled down) -->
+      <path d="M 372 256 L 427 265"/>
+    </g>
+
+    <!-- EYEBROWS GROUP (arched to match cat-eye style) -->
+    <g class="eyebrow" fill="none" stroke="#3D3D3D" stroke-width="6" stroke-linecap="round">
+      <!-- Left Eyebrow -->
+      <path d="M 155 195 Q 180 188 210 193"/>
+      
+      <!-- Right Eyebrow -->
+      <path d="M 302 193 Q 332 188 357 195"/>
+    </g>
+
+    <!-- EYES GROUP -->
+    <g fill="#3D3D3D">
+      <!-- Left Eye -->
+      <ellipse class="eye" cx="190" cy="255" rx="12" ry="12" style="transform-origin: 190px 255px;"/>
+      
+      <!-- Right Eye -->
+      <ellipse class="eye" cx="322" cy="255" rx="12" ry="12" style="transform-origin: 322px 255px;"/>
+    </g>
+  </g>
+</svg>

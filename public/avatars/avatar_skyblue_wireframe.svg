@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      @keyframes blink {
+        0%, 90%, 100% { transform: scaleY(1); }
+        93%, 97% { transform: scaleY(0.1); }
+      }
+      
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        25% { transform: translateY(-8px) rotate(-1deg); }
+        50% { transform: translateY(0) rotate(0deg); }
+        75% { transform: translateY(-5px) rotate(1deg); }
+      }
+      
+      @keyframes eyebrowRaise {
+        0%, 85%, 100% { transform: translateY(0); }
+        88%, 92% { transform: translateY(-4px); }
+      }
+      
+      @keyframes subtleGlow {
+        0%, 100% { filter: drop-shadow(0 0 0px rgba(14, 165, 233, 0)); }
+        50% { filter: drop-shadow(0 0 8px rgba(14, 165, 233, 0.3)); }
+      }
+      
+      .eye {
+        animation: blink 5s infinite;
+      }
+      
+      .character {
+        animation: bounce 3s ease-in-out infinite, subtleGlow 4s ease-in-out infinite;
+        transform-origin: center;
+      }
+      
+      .eyebrow {
+        transform-origin: center;
+        animation: eyebrowRaise 7s infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Character Group with bounce animation -->
+  <g class="character">
+    <!-- Main Head Circle -->
+    <circle cx="256" cy="256" r="180" fill="#0EA5E9"/>
+    
+    <!-- Head Outline -->
+    <circle cx="256" cy="256" r="180" fill="none" stroke="#3D3D3D" stroke-width="8"/>
+
+    <!-- THIN WIRE-FRAME ROUND GLASSES (John Lennon style) -->
+    <g fill="none" stroke="#3D3D3D" stroke-width="3" stroke-linecap="round">
+      <!-- Left Lens (perfectly round, thin frame) -->
+      <circle cx="196" cy="256" r="48"/>
+      
+      <!-- Right Lens (perfectly round, thin frame) -->
+      <circle cx="316" cy="256" r="48"/>
+      
+      <!-- Bridge (thin wire) -->
+      <line x1="244" y1="256" x2="268" y2="256"/>
+      
+      <!-- Left Temple Arm (thin wire) -->
+      <path d="M 148 256 L 85 245"/>
+      
+      <!-- Right Temple Arm (thin wire) -->
+      <path d="M 364 256 L 427 245"/>
+      
+      <!-- Nose pads (small details) -->
+      <line x1="244" y1="256" x2="240" y2="265"/>
+      <line x1="268" y1="256" x2="272" y2="265"/>
+    </g>
+
+    <!-- EYEBROWS GROUP -->
+    <g class="eyebrow" fill="none" stroke="#3D3D3D" stroke-width="6" stroke-linecap="round">
+      <!-- Left Eyebrow -->
+      <path d="M 160 195 Q 196 190 220 195"/>
+      
+      <!-- Right Eyebrow -->
+      <path d="M 292 195 Q 316 190 352 195"/>
+    </g>
+
+    <!-- EYES GROUP -->
+    <g fill="#3D3D3D">
+      <!-- Left Eye -->
+      <ellipse class="eye" cx="196" cy="256" rx="12" ry="12" style="transform-origin: 196px 256px;"/>
+      
+      <!-- Right Eye -->
+      <ellipse class="eye" cx="316" cy="256" rx="12" ry="12" style="transform-origin: 316px 256px;"/>
+    </g>
+  </g>
+</svg>
