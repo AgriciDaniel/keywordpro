@@ -425,7 +425,7 @@ function deriveSubcategories(): EndpointSubcategory[] {
     const segments = key.slice(key.indexOf('|') + 1).split('.');
     const label = segments.slice(1).map(humanise).join(' ') || humanise(segments[0]);
     return {
-      id: `auto-${key.replace('|', '-').replace(/\./g, '-')}`,
+      id: `auto-${key.replace(/[|.]/g, '-')}`,
       label: label === 'More' ? `More ${humanise(segments[0])}` : label,
       mode: members[0].mode as EndpointConsoleMode,
       description: `${members.length} ${humanise(segments[0])} endpoints.`,

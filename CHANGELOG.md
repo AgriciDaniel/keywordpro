@@ -73,6 +73,8 @@ No changes yet.
 
 - Non-keyword API requests are rejected before credentials or providers are
   reached.
+- Generated endpoint-group IDs replace every separator in one global
+  sanitization step and are verified against a safe-character invariant.
 - Startup rejects conflicting canonical and legacy encryption settings instead
   of silently choosing one.
 - Encryption keys can be read from a private file without copying the secret
