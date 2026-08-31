@@ -1,9 +1,10 @@
 # Security policy
 
-## Supported version
+## Supported versions
 
-No version has been released. The latest commit on `main` is the only supported
-private-development version until a tagged release is published.
+During the release-candidate period, the current `main` branch and the latest
+`v1.0.0-rc.x` GitHub prerelease receive security updates. Superseded release
+candidates are not supported.
 
 ## Reporting a vulnerability
 
