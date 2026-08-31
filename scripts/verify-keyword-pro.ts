@@ -1,7 +1,10 @@
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { computeDatabaseSsl } from '../src/db';
-import { RESEARCH_ENDPOINT_CATALOG } from '../src/lib/research/endpoint-catalog';
+import {
+  ENDPOINT_SUBCATEGORIES,
+  RESEARCH_ENDPOINT_CATALOG,
+} from '../src/lib/research/endpoint-catalog';
 import { ENDPOINT_METADATA } from '../src/lib/research/endpoint-metadata';
 import { ENDPOINT_TARGETING_FIELDS } from '../src/lib/research/endpoint-targeting.generated';
 import { ENDPOINTS } from '../src/lib/research/endpoints';
@@ -66,6 +69,16 @@ check(
     (endpoint) => endpoint.mode === 'keyword' && endpoint.provider === 'dataforseo',
   ),
   'UI catalog contains a non-keyword mode or provider',
+);
+
+const subcategoryIds = ENDPOINT_SUBCATEGORIES.map((subcategory) => subcategory.id);
+check(
+  new Set(subcategoryIds).size === subcategoryIds.length,
+  'Endpoint subcategory IDs contain duplicates',
+);
+check(
+  subcategoryIds.every((id) => /^[a-z0-9_-]+$/.test(id)),
+  'Endpoint subcategory IDs contain unsafe separator characters',
 );
 
 const targetingTypes = Object.keys(ENDPOINT_TARGETING_FIELDS);

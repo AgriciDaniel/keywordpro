@@ -46,6 +46,11 @@ tag, and the GitHub prerelease remain part of the controlled visibility
 cutover. This update records new evidence without rewriting the original
 2026-08-28 assessment.
 
+The first public CodeQL run identified incomplete sanitization in generated
+endpoint-group IDs. The release candidate now replaces all separators in one
+global operation and verifies every generated ID against a safe-character
+invariant. The expanded offline suite contains 677 assertions.
+
 | Area | Score | Evidence |
 | --- | ---: | --- |
 | Install, build, and runtime | 25/25 | Frozen install, two migrations, seed, CI, production build, and loopback smoke test pass. |
