@@ -13,8 +13,9 @@ not by itself authorize a tag, GitHub Release, license, or visibility change.
       by synthetic demo data.
 - [x] Build and verify a one-commit clean-history projection whose commit uses
       only the project-safe `.invalid` identity.
-- [ ] Obtain owner approval for the remote cutover strategy. Do not make the
-      existing private history public in place.
+- [x] Obtain owner approval for the remote cutover strategy. On 2026-08-31 the
+      owner approved publishing the clean replacement repository. The archived
+      private history remains private.
 - [x] Remove non-keyword provider and source-product execution code from the
       distributed source.
 - [x] Add a transactional, data-preserving migration from private-preview
@@ -26,8 +27,9 @@ not by itself authorize a tag, GitHub Release, license, or visibility change.
       or deletion action is required for the inspected local database.
 - [x] Complete clean-clone, production, and visible-browser acceptance on the
       release-candidate source tree.
-- [ ] Complete the owner-approved paid run, or record the owner's explicit
-      decision to release without that proof.
+- [x] Complete the owner-approved paid run, or record the owner's explicit
+      decision to release without that proof. Owner-supervised acceptance
+      completed nine full 19-source guided reports.
 
 Do not create an RC tag while any item above remains open.
 
@@ -92,8 +94,12 @@ release publication.
       and market-aware report-source counts.
 - [x] Check desktop and narrow layouts, select chevrons, chart resizing, empty
       states, community links, and the browser console in a visible browser.
-- [ ] With explicit spending approval, run one guided report and record the
+- [x] With explicit spending approval, run one guided report and record the
       displayed estimate, actual cost, source count, saved reopen, and exports.
+      The release estimator reported $0.495. Nine full runs completed with 19
+      sources, and the most recent full saved run recorded $0.50256. A saved
+      294-row report reopened without another provider request and generated a
+      294-row CSV, parseable JSON, and a valid seven-page PDF.
 
 ## Tag and prerelease
 

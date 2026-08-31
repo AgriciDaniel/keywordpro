@@ -19,6 +19,33 @@ or supersedes the private remote.
 
 Readiness score: **96 out of 100**.
 
+## Publication update, 2026-08-31
+
+The owner approved publishing the clean replacement repository while keeping
+the archived private history private. The candidate was cloned again from
+GitHub, installed from its frozen lockfile, and passed the full CI command
+against a disposable loopback PostgreSQL service. The dependency audit again
+reported no known vulnerability.
+
+Owner-supervised live acceptance produced 11 completed live sessions, including
+nine full 19-source guided reports. The release estimator reported $0.495, and
+the most recent full saved run recorded $0.50256. A saved 19-source report
+containing 294 keyword rows reopened without another provider request. The
+release code generated a 294-row CSV, parseable JSON, and a valid seven-page PDF
+from that saved report.
+
+The final pre-public audit covered `main` and all five active Dependabot
+branches. Detect-secrets reported no unexpected finding. The only entropy
+findings were package-manager integrity values and the reviewed screenshot
+SHA-256 values. No tracked private-state path, local absolute path, embedded
+authenticated URL, private-key material, or unexpected commit identity was
+found.
+
+Public-only security controls, anonymous access verification, the immutable
+tag, and the GitHub prerelease remain part of the controlled visibility
+cutover. This update records new evidence without rewriting the original
+2026-08-28 assessment.
+
 | Area | Score | Evidence |
 | --- | ---: | --- |
 | Install, build, and runtime | 25/25 | Frozen install, two migrations, seed, CI, production build, and loopback smoke test pass. |
