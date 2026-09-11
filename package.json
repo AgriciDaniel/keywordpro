@@ -74,7 +74,7 @@
     "lucide-react": "^0.575.0",
     "motion": "^12.34.3",
     "nanoid": "^5.1.6",
-    "next": "16.2.11",
+    "next": "16.3.3",
     "next-intl": "^4.8.3",
     "next-safe-action": "^8.1.4",
     "next-themes": "^0.4.6",
@@ -116,7 +116,7 @@
       "refractor>prismjs": "1.30.0",
       "esbuild": "0.28.1",
       "next>postcss": "8.5.26",
-      "next>sharp": "0.35.0"
+      "next>sharp": "0.35.4"
     }
   }
 }
